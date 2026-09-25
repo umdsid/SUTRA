@@ -2,8 +2,11 @@
 
 **Spatial Unified Transcriptomic Reconstruction and Analysis**
 
-This repository contains the released SUTRA production implementation and the
-code/products used for the paper.
+<p align="center">
+  <img src="docs/assets/sutra_hierarchy.gif"
+       alt="SUTRA recursive tissue hierarchy"
+       width="1000">
+</p>
 
 ## Part 1 — production
 
