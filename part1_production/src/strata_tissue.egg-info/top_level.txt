@@ -1,5 +1,0 @@
-strata
-strata_brain_pipeline
-strata_brain_publication
-strata_hierarchy
-strata_native_mechanics

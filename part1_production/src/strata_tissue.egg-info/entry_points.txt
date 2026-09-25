@@ -1,3 +1,0 @@
-[console_scripts]
-strata-discover = strata.cli.discover:main
-strata-tranche1 = strata.cli.tranche1:main
