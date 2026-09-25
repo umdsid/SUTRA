@@ -57,9 +57,23 @@
       "scientific_recalculation": false
     },
     "MainFig3": {
-      "status": "STAGED",
+      "status": "STAGED_COMPLETE",
       "source": "run_fig3.py",
-      "copy": "MainFig3/run_fig3.py"
+      "copy": "MainFig3/run_fig3.py",
+      "mode": "standalone_panels",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E_brain",
+        "E_kidney",
+        "F_brain",
+        "F_kidney"
+      ],
+      "assembled_figure": false,
+      "scientific_recalculation": false,
+      "hierarchy_rerun": false
     },
     "MainFig4": {
       "status": "STAGED",
