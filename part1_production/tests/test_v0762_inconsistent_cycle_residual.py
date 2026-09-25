@@ -1,5 +1,5 @@
 import numpy as np,pandas as pd
-from strata_hierarchy.v076.pressure_field_finalize import decompose_pressure_field
+from sutra.hierarchy.v076.pressure_field_finalize import decompose_pressure_field
 
 def test_inconsistent_cycle_is_retained_in_residual():
     e=pd.DataFrame({

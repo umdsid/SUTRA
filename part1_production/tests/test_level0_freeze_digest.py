@@ -1,6 +1,6 @@
 import pandas as pd
 
-from strata_hierarchy.freeze_audit import canonical_table_digest
+from sutra.hierarchy.freeze_audit import canonical_table_digest
 
 
 def test_digest_is_row_order_independent_after_canonical_sort():

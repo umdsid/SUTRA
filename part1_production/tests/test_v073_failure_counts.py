@@ -1,5 +1,5 @@
 import pandas as pd
-from strata_hierarchy.v073.full import failure_counts
+from sutra.hierarchy.v073.full import failure_counts
 
 
 def test_failure_counts_overlap_by_design():

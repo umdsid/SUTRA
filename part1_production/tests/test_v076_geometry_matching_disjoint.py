@@ -1,5 +1,5 @@
 import pandas as pd
-from strata_hierarchy.v076.geometry_hierarchy import geometry_matching
+from sutra.hierarchy.v076.geometry_hierarchy import geometry_matching
 
 def test_geometry_matching_is_disjoint():
     x=pd.DataFrame([

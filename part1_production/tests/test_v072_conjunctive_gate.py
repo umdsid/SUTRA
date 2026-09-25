@@ -1,5 +1,5 @@
 import pandas as pd
-from strata_hierarchy.v072.pilot import evaluate_candidates
+from sutra.hierarchy.v072.pilot import evaluate_candidates
 
 
 def thresholds():

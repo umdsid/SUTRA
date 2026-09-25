@@ -1,5 +1,5 @@
 import numpy as np
-from strata_hierarchy.v076.pressure_tail_audit import robust_tail_threshold
+from sutra.hierarchy.v076.pressure_tail_audit import robust_tail_threshold
 def test_tail_threshold_is_above_q999():
     x=np.r_[np.linspace(0,1,10000),1e6]
     t=robust_tail_threshold(x)

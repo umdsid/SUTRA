@@ -1,5 +1,5 @@
 import numpy as np
-from strata_hierarchy.v078.holonomy import compose_loop_holonomy,holonomy_metrics
+from sutra.hierarchy.v078.holonomy import compose_loop_holonomy,holonomy_metrics
 
 def test_three_dimensional_direction_triangle_can_have_nontrivial_holonomy():
     Q=np.array([

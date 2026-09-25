@@ -1,5 +1,5 @@
 import numpy as np
-from strata_hierarchy.v078.holonomy import coordinate_invariance_check
+from sutra.hierarchy.v078.holonomy import coordinate_invariance_check
 
 def test_holonomy_observables_invariant_under_orthogonal_relabeling():
     Q=np.array([

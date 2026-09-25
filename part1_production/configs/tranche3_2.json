@@ -1,8 +1,0 @@
-{
-  "junction_merge_range": "[0.5*GateB_epsilon, 2.0*GateB_epsilon]",
-  "tension_scale": "exact mean=1 after homogeneous solve",
-  "pressure_gauge": "exact mean=0",
-  "residual_gate": "paired improvement vs unit-tension zero-pressure baseline",
-  "confidence_floor": "admissible",
-  "strain": "excluded"
-}

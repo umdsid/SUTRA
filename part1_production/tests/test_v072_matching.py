@@ -1,5 +1,5 @@
 import pandas as pd
-from strata_hierarchy.v072.pilot import PilotConfig,greedy_matching
+from sutra.hierarchy.v072.pilot import PilotConfig,greedy_matching
 
 
 def test_matching_is_disjoint_and_capped():

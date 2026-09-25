@@ -1,5 +1,5 @@
 import numpy as np,pandas as pd
-from strata_hierarchy.v079.curvature_summary import cell_aggregate
+from sutra.hierarchy.v079.curvature_summary import cell_aggregate
 
 def test_loop_quantity_attaches_to_all_incident_cells():
     x=pd.DataFrame({

@@ -1,5 +1,5 @@
 import pandas as pd
-from strata_hierarchy.v079.curvature_summary import attach_holonomy_density,certify_summary
+from sutra.hierarchy.v079.curvature_summary import attach_holonomy_density,certify_summary
 
 def test_identity_loop_has_zero_density():
     x=pd.DataFrame({

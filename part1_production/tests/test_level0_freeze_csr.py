@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from strata_hierarchy.freeze_audit import validate_csr_npz
+from sutra.hierarchy.freeze_audit import validate_csr_npz
 
 
 def test_csr_matches_interface_endpoints(tmp_path):

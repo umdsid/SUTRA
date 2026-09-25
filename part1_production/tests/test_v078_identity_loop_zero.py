@@ -1,5 +1,5 @@
 import numpy as np
-from strata_hierarchy.v078.holonomy import compose_loop_holonomy,holonomy_metrics
+from sutra.hierarchy.v078.holonomy import compose_loop_holonomy,holonomy_metrics
 
 def test_all_zero_directional_frames_have_zero_holonomy():
     Q=np.zeros((3,5))

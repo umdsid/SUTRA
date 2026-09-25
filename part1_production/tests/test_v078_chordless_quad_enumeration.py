@@ -1,4 +1,4 @@
-from strata_hierarchy.v078.holonomy import enumerate_chordless_quads
+from sutra.hierarchy.v078.holonomy import enumerate_chordless_quads
 
 def test_chordless_quad_found_once():
     adj={

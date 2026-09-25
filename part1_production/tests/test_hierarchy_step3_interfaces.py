@@ -1,8 +1,8 @@
 import pandas as pd
 
-from strata_hierarchy.builders.interfaces import build_interfaces
-from strata_hierarchy.identifiers import CellID
-from strata_hierarchy.flags import TENSION_CERTIFIED, DELTA_P_CERTIFIED
+from sutra.hierarchy.builders.interfaces import build_interfaces
+from sutra.hierarchy.identifiers import CellID
+from sutra.hierarchy.flags import TENSION_CERTIFIED, DELTA_P_CERTIFIED
 
 
 def test_only_certified_mechanics_are_attached():

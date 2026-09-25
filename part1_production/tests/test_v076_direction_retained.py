@@ -1,6 +1,6 @@
 import numpy as np,pandas as pd
 from scipy import sparse
-from strata_hierarchy.v076.geometry_hierarchy import geometry_costs
+from sutra.hierarchy.v076.geometry_hierarchy import geometry_costs
 
 def test_directional_term_changes_pair_cost_when_covectors_differ():
     G=np.eye(2); ids=np.array([0,1]); states=np.array([[0.,0.],[1.,0.]])

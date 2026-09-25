@@ -1,0 +1,25 @@
+{
+  "min_finite_fraction": 0.65,
+  "min_effective_nodes": 20,
+  "min_removed_fraction": 0.05,
+  "max_removed_fraction": 0.995,
+  "velocity_quantile": 0.35,
+  "acceleration_quantile": 0.5,
+  "min_stationary_landmarks": 5,
+  "smoothing_widths": [
+    3,
+    5,
+    7,
+    9
+  ],
+  "derivative_strides": [
+    1,
+    2,
+    3
+  ],
+  "baseline_smoothing_width": 5,
+  "baseline_derivative_stride": 1,
+  "min_window_overlap_for_match": 0.35,
+  "min_config_support_fraction": 0.6,
+  "change_point_top_k": 12
+}

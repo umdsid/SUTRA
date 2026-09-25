@@ -1,5 +1,5 @@
 import numpy as np,pandas as pd
-from strata_hierarchy.v076.pressure_field_finalize import decompose_pressure_field
+from sutra.hierarchy.v076.pressure_field_finalize import decompose_pressure_field
 
 def test_exact_gradient_has_zero_nonpotential_part():
     e=pd.DataFrame({

@@ -1,5 +1,5 @@
 import numpy as np,pandas as pd
-from strata_hierarchy.v076.pressure_tail_audit import reconstruct_pressure_residuals
+from sutra.hierarchy.v076.pressure_tail_audit import reconstruct_pressure_residuals
 def test_exact_pressure_gradient_has_zero_residual():
     e=pd.DataFrame({"cell_i_index":[0,1,0],"cell_j_index":[1,2,2],
                     "delta_pressure_z":[1.,1.,2.],

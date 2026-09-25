@@ -2,19 +2,36 @@
 
 **Spatial Unified Transcriptomic Reconstruction and Analysis**
 
+This repository contains the released SUTRA production implementation and the
+code/products used for the paper.
+
 ## Part 1 — production
-One public pipeline:
+
+`part1_production/run_sutra.sh` is the single public entry point.
 
 ```bash
 cd part1_production
-python run_sutra.py
+./run_sutra.sh --help
+./run_sutra.sh --preflight
+./run_sutra.sh --run
 ```
 
-Canonical source is under `part1_production/sutra/`. Historical numbered development
-pipelines are not exposed.
+The released five-specimen workflow is a sequential pipeline. Historical stage
+numbers are retained only on internal runner filenames to preserve exact
+provenance of the validated computation; they are not alternative SUTRA
+versions.
+
+Raw data and large resources are not committed. Populate `data/` and
+`resources/` before running production.
 
 ## Part 2 — paper reproduction
-Frozen source products, standalone panels, supplementary products, movie material,
-and reproduction code. No assembled main figures are shipped.
 
-Run `./test_release.sh` before committing or pushing.
+`part2_paper/` contains frozen approved scientific products and canonical
+standalone panel-generation code. Main figures are not shipped as assembled
+composites. The released movie is retained with provenance; movie regeneration
+is not claimed unless its producer is present.
+
+## Naming
+
+The public Python namespace is `sutra`. Legacy `strata` and `strata_hierarchy`
+software namespaces are not part of the release interface.

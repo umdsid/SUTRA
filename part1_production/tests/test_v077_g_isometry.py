@@ -1,6 +1,6 @@
 import numpy as np
 
-from strata_hierarchy.v077.transport import (
+from sutra.hierarchy.v077.transport import (
     canonical_metric_sqrt,
     apply_transport,
 )

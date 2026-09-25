@@ -1,5 +1,5 @@
 import pandas as pd
-from strata_hierarchy.v073.full import maximal_disjoint_matching
+from sutra.hierarchy.v073.full import maximal_disjoint_matching
 
 
 def test_maximal_matching_has_no_pilot_cap():

@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from strata_hierarchy.v072.pilot import contract_labels
+from sutra.hierarchy.v072.pilot import contract_labels
 
 
 def test_smaller_label_survives_deterministically():

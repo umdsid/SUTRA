@@ -1,5 +1,5 @@
 import numpy as np
-from strata_hierarchy.v078.holonomy import reverse_inverse_error
+from sutra.hierarchy.v078.holonomy import reverse_inverse_error
 
 def test_reversed_loop_is_inverse_at_same_basepoint():
     Q=np.array([

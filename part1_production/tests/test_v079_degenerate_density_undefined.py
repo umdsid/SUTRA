@@ -1,5 +1,5 @@
 import numpy as np,pandas as pd
-from strata_hierarchy.v079.curvature_summary import (
+from sutra.hierarchy.v079.curvature_summary import (
     polygon_geometry,attach_holonomy_density
 )
 

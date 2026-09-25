@@ -1,4 +1,4 @@
-from strata_hierarchy.v078.holonomy import enumerate_triangles
+from sutra.hierarchy.v078.holonomy import enumerate_triangles
 
 def test_triangle_enumeration_unique():
     adj={

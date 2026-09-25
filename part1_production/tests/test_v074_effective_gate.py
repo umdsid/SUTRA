@@ -1,5 +1,5 @@
 import pandas as pd
-from strata_hierarchy.v074.effective_state_v074_frozen import evaluate_effective_candidates
+from sutra.hierarchy.v074.effective_state_v074_frozen import evaluate_effective_candidates
 
 
 def test_effective_gate_remains_conjunctive():

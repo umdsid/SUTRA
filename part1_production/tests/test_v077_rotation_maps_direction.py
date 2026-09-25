@@ -1,5 +1,5 @@
 import numpy as np
-from strata_hierarchy.v077.transport import rotate_minimal
+from sutra.hierarchy.v077.transport import rotate_minimal
 
 def test_minimal_rotation_maps_a_to_b():
     a=np.array([1.,0.,0.])

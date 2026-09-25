@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from strata_hierarchy.freeze_audit import (
+from sutra.hierarchy.freeze_audit import (
     Level0FreezeError,
     assert_exact_float_match,
 )

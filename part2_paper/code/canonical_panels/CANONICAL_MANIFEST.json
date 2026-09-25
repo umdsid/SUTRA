@@ -1,0 +1,65 @@
+{
+  "policy": {
+    "standalone_panels_only": true,
+    "panel_letters": false,
+    "figure_titles": false,
+    "descriptive_panel_titles": false,
+    "brain_kidney_separate": true,
+    "scientific_recalculation": false
+  },
+  "sources": {
+    "MainFig1": {
+      "status": "STAGED",
+      "source": "fig1_panel_A_level0_tissue.py",
+      "copy": "MainFig1/fig1_panel_A_level0_tissue.py"
+    },
+    "MainFig2": {
+      "status": "STAGED",
+      "source": "fig2_generate_panels.py",
+      "copy": "MainFig2/fig2_generate_panels.py"
+    },
+    "MainFig3": {
+      "status": "STAGED",
+      "source": "run_fig3.py",
+      "copy": "MainFig3/run_fig3.py"
+    },
+    "MainFig4": {
+      "status": "STAGED",
+      "source": "make_fig4_v4_10_1.py",
+      "copy": "MainFig4/make_fig4_v4_10_1.py"
+    },
+    "MainFig5": {
+      "status": "STAGED",
+      "source": "render_main_fig5_FINE.py",
+      "copy": "MainFig5/render_main_fig5_FINE.py"
+    },
+    "MainFig6": {
+      "status": "STAGED",
+      "source": "render_main_fig6_FINE.py",
+      "copy": "MainFig6/render_main_fig6_FINE.py"
+    },
+    "SuppFig2": {
+      "status": "STAGED",
+      "source": "run_suppfig2_v19_10_D_layout_repair.py",
+      "copy": "SuppFig2/run_suppfig2_v19_10_D_layout_repair.py"
+    },
+    "SuppFig3_4_5": {
+      "status": "STAGED",
+      "source": "run_disease_collective_supp.py",
+      "copy": "SuppFig3_4_5/run_disease_collective_supp.py"
+    },
+    "SuppFig6": {
+      "status": "STAGED",
+      "source": "render_suppfig06_v057.py",
+      "copy": "SuppFig6/render_suppfig06_v057.py"
+    }
+  },
+  "excluded_compositors": [
+    "fig1_composite.py",
+    "fig2_composite.py",
+    "fig2_main_composite.py",
+    "compose_fig2_final.py",
+    "compose_fig2_final_v2.py",
+    "prepare_suppfig2_compositor_v14.py"
+  ]
+}

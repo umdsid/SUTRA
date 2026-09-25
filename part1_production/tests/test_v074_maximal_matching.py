@@ -1,5 +1,5 @@
 import pandas as pd
-from strata_hierarchy.v074.effective_state import maximal_matching
+from sutra.hierarchy.v074.effective_state import maximal_matching
 
 
 def test_effective_matching_is_disjoint():

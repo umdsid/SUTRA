@@ -1,4 +1,4 @@
-from strata_hierarchy.v073.full import natural_stop_reason
+from sutra.hierarchy.v073.full import natural_stop_reason
 
 
 def test_no_admissible_is_natural_stop():

@@ -1,6 +1,6 @@
 import numpy as np,pandas as pd
 from scipy import sparse
-from strata_hierarchy.v076.geometry_hierarchy import geometry_costs
+from sutra.hierarchy.v076.geometry_hierarchy import geometry_costs
 
 def test_pair_cost_is_storage_orientation_invariant():
     G=np.eye(3)

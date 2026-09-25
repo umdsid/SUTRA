@@ -1,6 +1,6 @@
 import pandas as pd
 
-from strata_hierarchy.builders.cells import build_cells
+from sutra.hierarchy.builders.cells import build_cells
 
 
 def test_all_measured_cells_are_retained_in_matrix_order():

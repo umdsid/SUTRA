@@ -1,5 +1,5 @@
 import numpy as np
-from strata_hierarchy.v074.effective_state import aggregate_supernode_expression
+from sutra.hierarchy.v074.effective_state import aggregate_supernode_expression
 
 
 def test_effective_expression_is_mean_of_constituents():

@@ -1,5 +1,5 @@
 import numpy as np,pandas as pd
-from strata_hierarchy.v079.curvature_summary import attach_holonomy_density
+from sutra.hierarchy.v079.curvature_summary import attach_holonomy_density
 
 def test_density_is_angle_over_area():
     x=pd.DataFrame({

@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from strata_hierarchy.freeze_audit import (
+from sutra.hierarchy.freeze_audit import (
     Level0FreezeError,
     validate_retention_has_no_mechanics,
 )

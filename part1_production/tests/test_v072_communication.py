@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from strata_hierarchy.v072.pilot import communication_relations
+from sutra.hierarchy.v072.pilot import communication_relations
 
 
 def test_reciprocity_detects_symmetric_pair():

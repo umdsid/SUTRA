@@ -1,5 +1,5 @@
 import pandas as pd
-from strata_hierarchy.v078.holonomy import registry_lookup,loop_status
+from sutra.hierarchy.v078.holonomy import registry_lookup,loop_status
 
 def test_one_sided_edge_makes_loop_unresolved():
     reg=pd.DataFrame([

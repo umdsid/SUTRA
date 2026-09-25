@@ -1,5 +1,5 @@
 import numpy as np,pandas as pd
-from strata_hierarchy.v076.geometry_hierarchy import reconstruct_level0_mechanics
+from sutra.hierarchy.v076.geometry_hierarchy import reconstruct_level0_mechanics
 
 def test_pressure_difference_reconstruction():
     # true p = [1,0,-1], hence dp_ij=p_i-p_j

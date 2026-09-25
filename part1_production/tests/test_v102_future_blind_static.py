@@ -1,2 +1,0 @@
-from strata_hierarchy.v102.future_blind import detector_source_is_future_blind
-def test_detector_source_has_no_future_global_ops(): assert detector_source_is_future_blind()

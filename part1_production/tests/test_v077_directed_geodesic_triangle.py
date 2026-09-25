@@ -1,5 +1,5 @@
 import numpy as np,pandas as pd
-from strata_hierarchy.v077.geodesics import build_directed_cost_graph,triangle_audit
+from sutra.hierarchy.v077.geodesics import build_directed_cost_graph,triangle_audit
 
 def test_dijkstra_geodesics_satisfy_triangle_inequality():
     e=pd.DataFrame({

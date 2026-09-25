@@ -1,5 +1,5 @@
-from strata_hierarchy.builders.patches import build_patches
-from strata_hierarchy.identifiers import CellID, GraphID
+from sutra.hierarchy.builders.patches import build_patches
+from sutra.hierarchy.identifiers import CellID, GraphID
 
 
 def test_detached_cells_get_retention_patch_without_interfaces():

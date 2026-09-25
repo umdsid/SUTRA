@@ -1,7 +1,0 @@
-{
-  "min_confidence_class": "admissible",
-  "lambda_tension": 0.01,
-  "lambda_pressure": 0.01,
-  "lambda_mean_pressure": 100.0,
-  "strain": "excluded"
-}
