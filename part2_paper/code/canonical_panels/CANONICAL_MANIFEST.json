@@ -9,9 +9,34 @@
   },
   "sources": {
     "MainFig1": {
-      "status": "STAGED",
-      "source": "fig1_panel_A_level0_tissue.py",
-      "copy": "MainFig1/fig1_panel_A_level0_tissue.py"
+      "status": "STAGED_COMPLETE",
+      "mode": "standalone_panels",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "source": [
+        "fig1_panel_A_level0_tissue.py",
+        "fig1_panel_B_multichannel.py",
+        "fig1_panel_C_boundary_to_hierarchy.py",
+        "fig1_panel_D_structural_support.py",
+        "fig1_panel_E_molecular_match_divergent_decision.py",
+        "fig1_panel_FG_distributions.py"
+      ],
+      "copy": [
+        "MainFig1/fig1_panel_A_level0_tissue.py",
+        "MainFig1/fig1_panel_B_multichannel.py",
+        "MainFig1/fig1_panel_C_boundary_to_hierarchy.py",
+        "MainFig1/fig1_panel_D_structural_support.py",
+        "MainFig1/fig1_panel_E_molecular_match_divergent_decision.py",
+        "MainFig1/fig1_panel_FG_distributions.py"
+      ],
+      "assembled_figure": false
     },
     "MainFig2": {
       "status": "STAGED",
