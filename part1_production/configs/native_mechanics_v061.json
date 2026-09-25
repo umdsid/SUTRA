@@ -1,0 +1,13 @@
+{
+  "geometry": {
+    "vectorized": true,
+    "persistent_cache": true
+  },
+  "scheduler": {
+    "geometry_workers": 3,
+    "patch_workers": "auto: max(2,min(8,cpu_count-2))",
+    "blas_threads_per_patch_worker": 1
+  },
+  "patch_size": 300,
+  "halo_hops": 1
+}

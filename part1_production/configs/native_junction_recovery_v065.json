@@ -1,0 +1,14 @@
+{
+  "patch_size": 300,
+  "halo_hops": 1,
+  "workers": 3,
+  "junction_recovery": {
+    "local_pad_pixels": 5,
+    "exactly_three_touching_cells": true,
+    "all_three_pairwise_measured_interfaces_required": true,
+    "all_three_pairwise_contacts_must_be_local": true,
+    "min_angular_separation_deg": 12.0,
+    "max_angular_sector_deg": 210.0,
+    "create_new_tension_variables": false
+  }
+}

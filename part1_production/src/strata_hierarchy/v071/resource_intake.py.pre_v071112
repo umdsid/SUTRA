@@ -1,0 +1,316 @@
+"""Pinned resource intake for STRATA hierarchy v0.7.1.1."""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+import hashlib
+import json
+from pathlib import Path
+import shutil
+import subprocess
+
+import numpy as np
+import pandas as pd
+
+
+FUNCTIONAL_TARGETS = (
+    "h.all.v2025.1.Hs.symbols.gmt",
+    "c2.cp.reactome.v2025.1.Hs.symbols.gmt",
+    "c5.go.bp.v2025.1.Hs.symbols.gmt",
+)
+
+# Allow version-agnostic discovery if the exact frozen filenames differ.
+FUNCTIONAL_PATTERNS = {
+    "hallmark": ("h.all.", ".Hs.symbols.gmt"),
+    "reactome": ("c2.cp.reactome.", ".Hs.symbols.gmt"),
+    "go_bp": ("c5.go.bp.", ".Hs.symbols.gmt"),
+}
+
+CELLCHAT_INTERACTION = "interaction_input_CellChatDB.csv"
+CELLCHAT_COMPLEX = "complex_input_CellChatDB.csv"
+
+CELLCHAT_KIND_MAP = {
+    "cell-cell contact": "contact",
+    "secreted signaling": "diffusible",
+}
+
+SIMPLE_GENE_CHARS = set(
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_."
+)
+
+
+def sha256_file(path: str | Path, block_size: int = 1 << 20) -> str:
+    h=hashlib.sha256()
+    with open(path,"rb") as f:
+        for block in iter(lambda:f.read(block_size),b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+def _unique_existing(paths):
+    out=[];seen=set()
+    for p in paths:
+        q=Path(p).expanduser()
+        if q.exists():
+            q=q.resolve()
+            if q not in seen:
+                seen.add(q);out.append(q)
+    return out
+
+
+def _mdfind_name(name: str) -> list[Path]:
+    """Fast optional macOS Spotlight lookup."""
+    try:
+        r=subprocess.run(
+            ["mdfind", f"kMDItemFSName == '{name}'"],
+            check=False,capture_output=True,text=True,timeout=20,
+        )
+    except (FileNotFoundError,subprocess.TimeoutExpired):
+        return []
+    return _unique_existing(
+        line.strip() for line in r.stdout.splitlines() if line.strip()
+    )
+
+
+def _recursive_name_search(roots, name: str) -> list[Path]:
+    hits=[]
+    for root in _unique_existing(roots):
+        if root.is_file():
+            if root.name==name:
+                hits.append(root)
+            continue
+        try:
+            hits.extend(root.rglob(name))
+        except (PermissionError,OSError):
+            pass
+    return _unique_existing(hits)
+
+
+def locate_functional_resources(search_roots) -> dict[str,Path]:
+    """
+    Resolve one Hallmark, Reactome and GO-BP GMT.
+
+    Precedence is strict:
+
+      1. explicit/project search roots;
+      2. Spotlight fallback only for still-unresolved exact pinned filenames.
+
+    This prevents an ambient same-named resource elsewhere on the machine from
+    overriding a resource explicitly supplied by the user or repository.
+
+    Exact v2025.1 filenames are preferred within each precedence tier.  If an
+    explicit root contains only a version-compatible collection filename, that
+    explicit file is preferred over an ambient Spotlight copy.
+    """
+    roots=_unique_existing(search_roots)
+
+    explicit_gmts=[]
+    for r in roots:
+        if r.is_file() and r.suffix.lower()==".gmt":
+            explicit_gmts.append(r)
+        elif r.is_dir():
+            try:
+                explicit_gmts.extend(r.rglob("*.gmt"))
+            except (PermissionError,OSError):
+                pass
+    explicit_gmts=_unique_existing(explicit_gmts)
+
+    chosen={}
+
+    # Tier 1a: exact pinned names in explicit/project roots.
+    for name in FUNCTIONAL_TARGETS:
+        exact=[p for p in explicit_gmts if p.name==name]
+        if exact:
+            chosen[name]=sorted(exact)[0]
+
+    # Tier 1b: version-compatible collection filenames in explicit roots.
+    # Track roles independently rather than inferring them from dictionary keys.
+    resolved_roles=set()
+    for k,p in chosen.items():
+        n=p.name
+        for role,(prefix,suffix) in FUNCTIONAL_PATTERNS.items():
+            if n.startswith(prefix) and n.endswith(suffix):
+                resolved_roles.add(role)
+
+    for role,(prefix,suffix) in FUNCTIONAL_PATTERNS.items():
+        if role in resolved_roles:
+            continue
+        cands=[
+            p for p in explicit_gmts
+            if p.name.startswith(prefix) and p.name.endswith(suffix)
+        ]
+        if cands:
+            chosen[role]=sorted(cands,key=lambda p:p.name)[-1]
+            resolved_roles.add(role)
+
+    # Tier 2: Spotlight is fallback-only, and only for unresolved roles.
+    for role,(prefix,suffix) in FUNCTIONAL_PATTERNS.items():
+        if role in resolved_roles:
+            continue
+
+        # Prefer the known pinned exact filename belonging to this role.
+        target_names=[
+            name for name in FUNCTIONAL_TARGETS
+            if name.startswith(prefix) and name.endswith(suffix)
+        ]
+        hits=[]
+        for name in target_names:
+            hits.extend(_mdfind_name(name))
+        hits=_unique_existing(hits)
+
+        if hits:
+            chosen[role]=sorted(hits)[0]
+            resolved_roles.add(role)
+
+    return chosen
+
+
+def locate_cellchat_interaction(search_roots) -> Path | None:
+    roots=_unique_existing(search_roots)
+    hits=_recursive_name_search(roots,CELLCHAT_INTERACTION)
+    if not hits:
+        hits=_mdfind_name(CELLCHAT_INTERACTION)
+    return sorted(hits)[0] if hits else None
+
+
+def _simple_gene(x: str) -> bool:
+    x=str(x).strip()
+    return bool(x) and all(c in SIMPLE_GENE_CHARS for c in x)
+
+
+def canonicalize_cellchat(interaction_csv: str | Path):
+    """
+    Convert native CellChatDB interaction CSV to STRATA's typed directed schema.
+
+    Conservative v0.7.1.1 rule:
+      * Cell-Cell Contact -> contact
+      * Secreted Signaling -> diffusible
+      * ECM-Receptor -> retained in audit but not emitted
+      * complex/multi-component ligand or receptor names are not exploded into
+        false single-gene interactions; they are reported as skipped.
+
+    This gives the hierarchy a clean typed subset without changing the native
+    CellChat biological record.
+    """
+    p=Path(interaction_csv)
+    df=pd.read_csv(p,low_memory=False)
+    lower={str(c).lower():c for c in df.columns}
+
+    ligand=lower.get("ligand")
+    receptor=lower.get("receptor")
+    annotation=lower.get("annotation")
+    pathway=lower.get("pathway_name")
+    interaction_name=lower.get("interaction_name")
+    evidence=lower.get("evidence")
+
+    missing=[
+        name for name,col in (
+            ("ligand",ligand),("receptor",receptor),("annotation",annotation)
+        ) if col is None
+    ]
+    if missing:
+        raise ValueError(
+            f"CellChat interaction table lacks required columns: {missing}"
+        )
+
+    rows=[]
+    counts={
+        "n_source_rows":int(len(df)),
+        "n_emitted_rows":0,
+        "n_unsupported_annotation":0,
+        "n_complex_or_nonsimple_entity":0,
+        "annotation_counts":{},
+    }
+
+    for r in df.to_dict(orient="records"):
+        lig=str(r.get(ligand,"")).strip()
+        rec=str(r.get(receptor,"")).strip()
+        ann=str(r.get(annotation,"")).strip()
+        ann_key=ann.lower()
+        counts["annotation_counts"][ann]=(
+            counts["annotation_counts"].get(ann,0)+1
+        )
+
+        kind=CELLCHAT_KIND_MAP.get(ann_key)
+        if kind is None:
+            counts["n_unsupported_annotation"]+=1
+            continue
+
+        # Do not decompose a complex label into independent pseudo-receptors.
+        if not _simple_gene(lig) or not _simple_gene(rec):
+            counts["n_complex_or_nonsimple_entity"]+=1
+            continue
+
+        rows.append({
+            "sender_gene":lig,
+            "receiver_gene":rec,
+            "kind":kind,
+            "family":(
+                "unspecified" if pathway is None
+                else str(r.get(pathway,"unspecified"))
+            ),
+            "database":"CellChatDB",
+            "native_annotation":ann,
+            "native_interaction_name":(
+                "" if interaction_name is None
+                else str(r.get(interaction_name,""))
+            ),
+            "native_evidence":(
+                "" if evidence is None else str(r.get(evidence,""))
+            ),
+        })
+
+    out=pd.DataFrame(rows)
+    if len(out):
+        # Preserve evidence multiplicity only through count; canonical registry
+        # itself has one row per biological typed pair+family.
+        grp_cols=["sender_gene","receiver_gene","kind","family","database"]
+        out=(
+            out.groupby(grp_cols,dropna=False,sort=True)
+            .agg(
+                native_annotation=("native_annotation","first"),
+                native_interaction_name=("native_interaction_name","first"),
+                native_evidence=("native_evidence","first"),
+                source_rows=("sender_gene","size"),
+            )
+            .reset_index()
+        )
+    else:
+        out=pd.DataFrame(columns=[
+            "sender_gene","receiver_gene","kind","family","database",
+            "native_annotation","native_interaction_name","native_evidence",
+            "source_rows",
+        ])
+
+    counts["n_emitted_rows"]=int(len(out))
+    return out,counts
+
+
+def copy_functional_snapshot(chosen, dest: Path):
+    dest.mkdir(parents=True,exist_ok=True)
+    manifest=[]
+    copied=[]
+    for role,src in sorted(chosen.items()):
+        src=Path(src).resolve()
+        target=dest/src.name
+        shutil.copy2(src,target)
+        copied.append(target)
+        manifest.append({
+            "role":role,
+            "source_path":str(src),
+            "source_sha256":sha256_file(src),
+            "snapshot_path":str(target),
+            "snapshot_sha256":sha256_file(target),
+            "filename":target.name,
+        })
+    return copied,manifest
+
+
+__all__=[
+    "FUNCTIONAL_TARGETS",
+    "locate_functional_resources",
+    "locate_cellchat_interaction",
+    "canonicalize_cellchat",
+    "copy_functional_snapshot",
+    "sha256_file",
+]

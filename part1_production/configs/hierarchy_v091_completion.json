@@ -1,0 +1,10 @@
+{
+  "spatial_knn": 16,
+  "local_scale_k": 4,
+  "gap_factor": 2.25,
+  "edge_chunk": 50000,
+  "functional_chunk": 12000,
+  "communication_chunk": 12000,
+  "harmonic_max_iter": 500,
+  "harmonic_tol": 1e-07
+}

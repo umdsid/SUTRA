@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "samples": [
+    {
+      "id": "healthy_reference",
+      "condition": "non-diseased",
+      "cohort": "brain"
+    },
+    {
+      "id": "alzheimers",
+      "condition": "Alzheimer's disease",
+      "cohort": "brain"
+    },
+    {
+      "id": "gbm_reference_addon",
+      "condition": "glioblastoma",
+      "cohort": "brain"
+    }
+  ],
+  "required_results": {
+    "final_landscape": "hierarchy_v112_final_supported_hierarchy_landscape",
+    "merger_atlas": "hierarchy_v120_merger_driver_atlas",
+    "production_trajectory": "hierarchy_v1100_frozen_production_rerun",
+    "exact_replay": "hierarchy_v10931_ordered_merge_shard_replay"
+  },
+  "output_root": "results/brain_publication_pipeline_v1",
+  "panel_root": "panels/brain_publication_pipeline_v1",
+  "formats": [
+    "pdf",
+    "svg",
+    "png"
+  ],
+  "png_dpi": 300,
+  "figure_size_inches": [
+    4.4,
+    3.35
+  ],
+  "gene_analysis": {
+    "normalization": "log1p_library_size_10000",
+    "min_detected_fraction": 0.01,
+    "max_pairs_per_parent": 50,
+    "max_actual_pairs_per_landmark": 12000,
+    "control_neighbors_to_search": 32,
+    "control_mass_ratio_min": 0.5,
+    "control_mass_ratio_max": 2.0,
+    "top_genes_per_panel": 20,
+    "random_seed": 1201
+  },
+  "spatial_panels": {
+    "max_points": 120000,
+    "point_size": 1.0
+  },
+  "scientific_contract": {
+    "hierarchy_frozen": true,
+    "new_merges": false,
+    "thresholds_modified": false,
+    "node_target": false,
+    "cross_tissue_comparison": false
+  }
+}

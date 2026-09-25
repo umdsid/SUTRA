@@ -1,0 +1,77 @@
+{
+  "version": "1.1.0",
+  "samples": [
+    {
+      "id": "healthy_reference",
+      "condition": "non-diseased",
+      "cohort": "brain"
+    },
+    {
+      "id": "alzheimers",
+      "condition": "Alzheimer's disease",
+      "cohort": "brain"
+    },
+    {
+      "id": "gbm_reference_addon",
+      "condition": "glioblastoma",
+      "cohort": "brain"
+    }
+  ],
+  "inputs": {
+    "brain_pipeline": "results/brain_publication_pipeline_v1",
+    "brain_panels": "panels/brain_publication_pipeline_v1",
+    "final_landscape": "results/hierarchy_v112_final_supported_hierarchy_landscape",
+    "merger_atlas": "results/hierarchy_v120_merger_driver_atlas",
+    "production": "results/hierarchy_v1100_frozen_production_rerun"
+  },
+  "outputs": {
+    "results": "results/brain_publication_complete_v110",
+    "panels": "panels/brain_publication_complete_v110"
+  },
+  "style": {
+    "formats": [
+      "pdf",
+      "svg",
+      "png"
+    ],
+    "png_dpi": 450,
+    "single_width_in": 3.5,
+    "wide_width_in": 7.2,
+    "height_in": 3.1,
+    "font_size": 8.0,
+    "title_size": 8.5,
+    "marker_size": 13.0,
+    "line_width": 1.0
+  },
+  "stability": {
+    "cell_retention": [
+      0.95,
+      0.9,
+      0.8
+    ],
+    "bootstrap_replicates": 25,
+    "null_replicates": 20,
+    "random_seed": 20260824,
+    "null_models": [
+      "random_coalescent",
+      "spatial_voronoi"
+    ],
+    "representative_landmarks": 5
+  },
+  "gene_trajectory": {
+    "top_per_sample": 20,
+    "top_cross_sample": 30
+  },
+  "optional_gene_sets_globs": [
+    "resources/**/*.gmt",
+    "resources/gene_sets/**/*.gmt"
+  ],
+  "contract": {
+    "postprocessing_only": true,
+    "hierarchy_frozen": true,
+    "new_merges": false,
+    "thresholds_modified": false,
+    "cross_tissue_comparison": false,
+    "multi_panel_assembly": false
+  }
+}

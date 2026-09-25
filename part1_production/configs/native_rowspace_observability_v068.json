@@ -1,0 +1,17 @@
+{
+  "patch_size": 300,
+  "halo_hops": 1,
+  "workers": 8,
+  "representation": "v0.6.4 persistent boundaries + accepted v0.6.5 junctions",
+  "factorization": "row-normalized pivoted QR of A^T",
+  "rank_rcond": 1e-09,
+  "observable_residual_tolerance": 1e-08,
+  "marginal_residual_tolerance": 1e-06,
+  "v067_regression_minimum_agreement": 0.99,
+  "caps": {
+    "n_variables": null,
+    "nullity": null
+  },
+  "pressure_reporting": "cell-cell pressure contrasts",
+  "absolute_pressure_reporting": "not promoted by v0.6.8"
+}

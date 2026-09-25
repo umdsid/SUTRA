@@ -1,0 +1,16 @@
+{
+  "candidate_radii": [
+    5.0,
+    6.0,
+    7.0,
+    7.5,
+    8.0
+  ],
+  "selection": "smallest global passing radius",
+  "gates": {
+    "min_gateB_recall": 0.95,
+    "max_new_contact_burden": 0.35,
+    "min_largest_component_fraction": 0.9,
+    "preserve_observed_pixels": true
+  }
+}

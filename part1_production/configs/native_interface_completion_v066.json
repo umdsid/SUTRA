@@ -1,0 +1,9 @@
+{
+  "max_gap_pixels": 64,
+  "exactly_three_cells": true,
+  "exactly_one_missing_pair": true,
+  "min_virtual_contact_edges": 2,
+  "max_tie_fraction": 0.4,
+  "virtual_curvature_confidence": 0.0,
+  "rank_only": true
+}

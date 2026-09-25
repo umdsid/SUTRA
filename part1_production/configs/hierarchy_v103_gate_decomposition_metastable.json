@@ -1,0 +1,17 @@
+{
+  "min_finite_fraction": 0.65,
+  "closure_lags": [
+    1,
+    2,
+    3
+  ],
+  "central_recent_width": 4,
+  "central_history_width": 12,
+  "velocity_ratio_max": 0.72,
+  "acceleration_ratio_max": 0.82,
+  "closure_ratio_max": 0.78,
+  "closure_support_required": 0.67,
+  "min_resolved_closure_lags": 2,
+  "metastable_min_separation": 4,
+  "metastable_top_k": 15
+}

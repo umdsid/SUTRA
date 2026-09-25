@@ -1,0 +1,53 @@
+{
+  "stage": "terminal landscape audit",
+  "strata_version": "1.1.1",
+  "source_stage": "hierarchy_v1100_frozen_production_rerun",
+  "parallel_specimens": 3,
+  "minimum_evaluations": 50,
+  "node_column_aliases": [
+    "nodes",
+    "n_nodes",
+    "node_count",
+    "active_nodes"
+  ],
+  "eval_column_aliases": [
+    "eval",
+    "evaluation",
+    "evaluation_index",
+    "scientific_evaluation"
+  ],
+  "scale_column_aliases": [
+    "ell",
+    "scale",
+    "scale_log",
+    "log_scale"
+  ],
+  "block_prefixes": [
+    "speed_",
+    "block_speed_"
+  ],
+  "stability_columns": [
+    "mass",
+    "expr",
+    "spatial"
+  ],
+  "basin": {
+    "smoothing_window": 3,
+    "local_radius": 2,
+    "minimum_lifetime_evals": 3,
+    "maximum_gap_evals": 1
+  },
+  "pareto_objectives": {
+    "maximize": [
+      "lifetime",
+      "depth",
+      "block_coherence",
+      "expression_support",
+      "spatial_support"
+    ],
+    "minimize": []
+  },
+  "landmark_rule": "Pareto layer-1 persistence basin; no scalarization and no node-count target",
+  "terminal_rule_is_not_reused": true,
+  "new_merges_performed": false
+}

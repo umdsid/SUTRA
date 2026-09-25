@@ -1,0 +1,121 @@
+"""CellChat native R-data discovery/export for STRATA v0.7.1.2."""
+
+from __future__ import annotations
+
+from pathlib import Path
+import shutil
+import subprocess
+
+from .resource_intake import (
+    CELLCHAT_INTERACTION,
+    _mdfind_name,
+    _recursive_name_search,
+    _unique_existing,
+    sha256_file,
+)
+
+CELLCHAT_RDATA_NAMES = (
+    "CellChatDB.human.rda",
+    "CellChatDB.human.RData",
+    "CellChatDB.human.rds",
+)
+
+
+def locate_cellchat_database(search_roots) -> tuple[str, Path] | None:
+    """
+    Resolve CellChat human database with precedence:
+
+      1. explicit/project interaction CSV
+      2. explicit/project CellChatDB.human R data
+      3. Spotlight interaction CSV
+      4. Spotlight CellChatDB.human R data
+    """
+    roots = _unique_existing(search_roots)
+
+    hits = _recursive_name_search(roots, CELLCHAT_INTERACTION)
+    if hits:
+        return "interaction_csv", sorted(hits)[0]
+
+    for name in CELLCHAT_RDATA_NAMES:
+        hits = _recursive_name_search(roots, name)
+        if hits:
+            p = sorted(hits)[0]
+            return ("human_rds" if p.suffix.lower() == ".rds" else "human_rda", p)
+
+    hits = _mdfind_name(CELLCHAT_INTERACTION)
+    if hits:
+        return "interaction_csv", sorted(hits)[0]
+
+    ambient = []
+    for name in CELLCHAT_RDATA_NAMES:
+        ambient.extend(_mdfind_name(name))
+    ambient = _unique_existing(ambient)
+    if ambient:
+        p = sorted(ambient)[0]
+        return ("human_rds" if p.suffix.lower() == ".rds" else "human_rda", p)
+
+    return None
+
+
+def export_cellchat_interaction_with_r(
+    source: str | Path,
+    source_kind: str,
+    out_csv: str | Path,
+    extractor_script: str | Path,
+) -> dict:
+    """
+    Export the native CellChat interaction table via standalone Rscript.
+
+    No CellChat inference routine is called.
+    """
+    source = Path(source).resolve()
+    out_csv = Path(out_csv).resolve()
+    extractor_script = Path(extractor_script).resolve()
+    out_csv.parent.mkdir(parents=True, exist_ok=True)
+
+    rscript = shutil.which("Rscript")
+    if rscript is None:
+        raise RuntimeError("Rscript is not available")
+    if not extractor_script.exists():
+        raise FileNotFoundError(extractor_script)
+
+    proc = subprocess.run(
+        [
+            rscript,
+            str(extractor_script),
+            str(source),
+            source_kind,
+            str(out_csv),
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+        timeout=120,
+    )
+    if proc.returncode != 0:
+        raise RuntimeError(
+            "Rscript CellChat export failed: "
+            + (proc.stderr.strip() or proc.stdout.strip())
+        )
+    if not out_csv.exists() or out_csv.stat().st_size == 0:
+        raise RuntimeError(
+            "Rscript reported success but no CellChat interaction CSV was written"
+        )
+
+    return {
+        "source_kind": source_kind,
+        "source_path": str(source),
+        "source_sha256": sha256_file(source),
+        "export_path": str(out_csv),
+        "export_sha256": sha256_file(out_csv),
+        "Rscript": rscript,
+        "extractor_script": str(extractor_script),
+        "extractor_sha256": sha256_file(extractor_script),
+    }
+
+
+__all__ = [
+    "CELLCHAT_RDATA_NAMES",
+    "locate_cellchat_database",
+    "export_cellchat_interaction_with_r",
+]

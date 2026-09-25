@@ -1,0 +1,19 @@
+"""Compact Level-0 validity/provenance flags."""
+
+from __future__ import annotations
+
+GEOMETRY_VALID = 1 << 0
+TENSION_CERTIFIED = 1 << 1
+DELTA_P_CERTIFIED = 1 << 2
+PROVENANCE_COMPLETE = 1 << 3
+CELL_CELL_INTERFACE = 1 << 4
+BACKGROUND_INTERFACE = 1 << 5
+
+__all__ = [
+    "GEOMETRY_VALID",
+    "TENSION_CERTIFIED",
+    "DELTA_P_CERTIFIED",
+    "PROVENANCE_COMPLETE",
+    "CELL_CELL_INTERFACE",
+    "BACKGROUND_INTERFACE",
+]

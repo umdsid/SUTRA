@@ -1,0 +1,29 @@
+{
+  "connection": {
+    "type": "minimal directional-frame rotation",
+    "symmetric_metric_isometry": true,
+    "whitened_coordinates": "y=L^T v, G=L L^T",
+    "preferred_frame": "q=L^-1 b / ||L^-1 b||",
+    "zero_zero": "identity",
+    "one_sided": "unresolved",
+    "antipodal": "unresolved"
+  },
+  "geodesics": {
+    "graph": "all Level-0 geometry-resolved tissue edges",
+    "forward_cost": "F_i(z_j-z_i)",
+    "reverse_cost": "F_j(z_i-z_j)",
+    "hierarchy_admissibility_is_transport_gate": false,
+    "landmarks": 16
+  },
+  "audits": {
+    "alpha_isometry": true,
+    "direction_mapping": true,
+    "roundtrip_inverse": true,
+    "triangle_inequality": true,
+    "pressure_contract_required": true
+  },
+  "storage": {
+    "materialize_full_543x543_transport_matrices": false,
+    "compact_edge_registry": true
+  }
+}

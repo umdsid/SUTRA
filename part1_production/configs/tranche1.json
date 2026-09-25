@@ -1,0 +1,9 @@
+{
+  "schema_version": "strata.tranche1.config.v1",
+  "data_root": "data",
+  "results_root": "results/tranche1_level0",
+  "hash_inputs": true,
+  "audit_sparse_counts": true,
+  "require_cells_table": true,
+  "strict_barcode_alignment": true
+}

@@ -1,0 +1,25 @@
+{
+  "strata_version": "1.1.1.3",
+  "production_stage": "hierarchy_v1100_frozen_production_rerun",
+  "provenance_stage": "hierarchy_v1112_support_provenance_recovery",
+  "landscape_stage": "hierarchy_v1111_terminal_landscape_repair",
+  "samples": [
+    "healthy_reference",
+    "alzheimers",
+    "gbm_reference_addon",
+    "nondiseased_kidney",
+    "prcc"
+  ],
+  "parallel_specimens": 3,
+  "required_hashes": {
+    "src/strata_hierarchy/v110/terminal_rule.py": "dd19488a5baca907fcf97c85bfef8e7349b9a68c15af2551602954e8a12cceaf",
+    "configs/hierarchy_v110_production_terminal_rule.json": "2aa3def739ee67df87e450214f3dc3fca82663042798f4cee033145745c0ab5f",
+    "src/strata_hierarchy/v1100/production.py": "6267a6ad22bcb5d3ad97c86c49e972fc0adf53e9085b74cd9c25c5b4df7bca6a"
+  },
+  "minimum_replay_coverage": 0.99,
+  "expected_persistence_confirmations": 3,
+  "node_count_target": null,
+  "new_merges": false,
+  "allow_threshold_modification": false,
+  "allow_nearest_imputation": false
+}

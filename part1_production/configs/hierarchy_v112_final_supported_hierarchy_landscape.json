@@ -1,0 +1,34 @@
+{
+  "strata_version": "1.1.2",
+  "production_stage": "hierarchy_v1100_frozen_production_rerun",
+  "repaired_landscape_stage": "hierarchy_v1111_terminal_landscape_repair",
+  "exact_replay_stage": "hierarchy_v1113_exact_frozen_terminal_replay",
+  "historical_stage": "hierarchy_v1061_full_landmark_materialization",
+  "samples": [
+    "healthy_reference",
+    "alzheimers",
+    "gbm_reference_addon",
+    "nondiseased_kidney",
+    "prcc"
+  ],
+  "parallel_specimens": 3,
+  "minimum_exact_support_coverage": 0.99,
+  "pareto_objectives": [
+    "lifetime",
+    "depth",
+    "block_coherence",
+    "expression_support",
+    "spatial_support"
+  ],
+  "mass_is_existence_veto": false,
+  "mass_is_pareto_objective": false,
+  "support_aggregation": "basin_mean_fraction_pass",
+  "join_keys": [
+    "evaluation_index",
+    "nodes"
+  ],
+  "new_merges": false,
+  "node_count_target": null,
+  "thresholds_modified": false,
+  "nearest_imputation": false
+}

@@ -1,0 +1,20 @@
+{
+  "geometry": {
+    "min_interface_pixels": 4,
+    "min_curvature_points": 8,
+    "curvature_cap": 0.5
+  },
+  "solver": {
+    "patch_size": 300,
+    "halo_hops": 1,
+    "min_curvature_confidence": 0.15,
+    "junction_weight": 1.0,
+    "curvature_weight": 1.0,
+    "pressure_gauge_weight": 10.0,
+    "tension_gauge_weight": 10.0,
+    "max_iter": 300
+  },
+  "execution": {
+    "specimen_workers": 3
+  }
+}

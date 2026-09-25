@@ -1,0 +1,11 @@
+{
+  "sample": "alzheimers",
+  "N0": 44955,
+  "u_source": "hierarchy_coordinate_removed_fraction (pre-step); removed_fraction_after (productive post-step)",
+  "productive_microsteps": 3234,
+  "terminal_microstep": 3234,
+  "terminal_merges": 36414,
+  "terminal_u": 0.81001001001001,
+  "stop_reason": "no_contextually_admissible_boundaries",
+  "terminal_phi": 0.09453898342787231
+}

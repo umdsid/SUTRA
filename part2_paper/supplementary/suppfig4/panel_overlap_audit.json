@@ -1,0 +1,12 @@
+{
+  "comparison": "nk-prcc",
+  "reference": "nondiseased_kidney",
+  "comparison_sample": "prcc",
+  "reference_features": 541,
+  "comparison_features": 541,
+  "common_features": 541,
+  "reference_only": 0,
+  "comparison_only": 0,
+  "common_fraction_reference": 1.0,
+  "common_fraction_comparison": 1.0
+}

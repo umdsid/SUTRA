@@ -1,0 +1,31 @@
+{
+  "contextual_flow": {
+    "base_hops": 2,
+    "max_hops": 8,
+    "diffusion_alpha": 0.35,
+    "context_mix": 0.4,
+    "context_reliability_gain": 0.85,
+    "beta_softmax": 3.0,
+    "uncertainty_penalty": 0.35,
+    "molecular_weight": 1.0,
+    "mechanics_weight": 1.0,
+    "communication_weight": 0.75,
+    "geometry_weight": 1.0,
+    "topology_weight": 0.4,
+    "initial_cost_quantile": 0.35,
+    "maximum_cost_quantile": 0.9,
+    "scale_growth": 0.4,
+    "epsilon_fraction": 0.0004,
+    "soft_step_1": 1500,
+    "soft_step_2": 3000,
+    "soft_step_3": 5000,
+    "rescue_fraction_1": 0.0005,
+    "rescue_fraction_2": 0.001,
+    "last_resort_fraction": 0.005,
+    "exact_frontier_max_edges": 18,
+    "checkpoint_every": 50,
+    "heavy_landmark_reduction_fraction": 0.0025,
+    "max_microsteps_safety": 20000,
+    "archive_all_candidates": true
+  }
+}

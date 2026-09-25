@@ -1,0 +1,24 @@
+{
+  "figure_family": "disease collective organization",
+  "comparison": "hb-gbm",
+  "hierarchy_source": "/Users/sid/Desktop/SUTRA/results/hierarchy_v0911_specimen_local_contextual_flow/ledger",
+  "hierarchy_rerun": false,
+  "aggregation_null": {
+    "reps": 250,
+    "seed": 20260922,
+    "preserves": "N0 and empirical number of accepted merges per microstep; randomizes active-object pairing"
+  },
+  "molecular_basis": "exact feature-name intersection; missing genes never encoded as zero",
+  "panel_overlap": {
+    "comparison": "hb-gbm",
+    "reference": "healthy_reference",
+    "comparison_sample": "gbm_reference_addon",
+    "reference_features": 541,
+    "comparison_features": 541,
+    "common_features": 541,
+    "reference_only": 0,
+    "comparison_only": 0,
+    "common_fraction_reference": 1.0,
+    "common_fraction_comparison": 1.0
+  }
+}

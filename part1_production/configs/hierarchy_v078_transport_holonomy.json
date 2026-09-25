@@ -1,0 +1,38 @@
+{
+  "loops": {
+    "triangles": "all",
+    "chordless_quads": "deterministic, capped",
+    "max_quads": 20000
+  },
+  "transport": {
+    "source": "v0.7.7 certified canonical symmetric connection",
+    "resolved_statuses": [
+      "IDENTITY_SYMMETRIC",
+      "DIRECTIONAL_ROTATION"
+    ],
+    "one_sided": "unresolved",
+    "antipodal": "unresolved"
+  },
+  "holonomy": {
+    "compute_in_reduced_directional_span": true,
+    "materialize_543x543": false,
+    "statistics": [
+      "identity deviation",
+      "spectral angle RMS",
+      "spectral angle max",
+      "determinant",
+      "orthogonality error",
+      "reverse-loop inverse error"
+    ]
+  },
+  "audits": {
+    "identity_only_loop_zero": true,
+    "orthogonality": true,
+    "loop_reversal_inverse": true,
+    "coordinate_relabeling_invariance": true
+  },
+  "claim_policy": {
+    "continuum_curvature_tensor": false,
+    "transport_holonomy": true
+  }
+}

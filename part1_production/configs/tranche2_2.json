@@ -1,0 +1,7 @@
+{
+  "max_assignment_distance": 6.0,
+  "neighbor_candidate_hops": 1,
+  "raster_max_pixels": 10000000,
+  "morphology_quantile": 0.35,
+  "preserve_observed_polygons": true
+}

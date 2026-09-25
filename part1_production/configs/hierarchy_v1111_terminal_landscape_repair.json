@@ -1,0 +1,73 @@
+{
+  "strata_version": "1.1.1.1",
+  "source_stage": "hierarchy_v1100_frozen_production_rerun",
+  "previous_landmark_stages": [
+    "hierarchy_v1061_full_landmark_materialization",
+    "hierarchy_v106_frozen_landmark_materialization",
+    "hierarchy_v105_basin_failure_pareto_audit",
+    "hierarchy_v104_persistence_basin_landmarks",
+    "hierarchy_v103_gate_decomposition_metastable_audit"
+  ],
+  "samples": [
+    "healthy_reference",
+    "alzheimers",
+    "gbm_reference_addon",
+    "nondiseased_kidney",
+    "prcc"
+  ],
+  "parallel_specimens": 3,
+  "minimum_evaluations": 50,
+  "smoothing_window": 3,
+  "local_extremum_radius": 2,
+  "minimum_basin_lifetime_evals": 3,
+  "block_speed_prefixes": [
+    "speed_",
+    "block_speed_"
+  ],
+  "support_aliases": {
+    "mass": [
+      "mass",
+      "mass_status",
+      "mass_gate",
+      "mass_stable",
+      "mass_stability",
+      "mass_pass",
+      "mass_ok",
+      "mass_support"
+    ],
+    "expr": [
+      "expr",
+      "expression",
+      "expr_status",
+      "expression_status",
+      "expr_gate",
+      "expression_gate",
+      "expr_stable",
+      "expression_stable",
+      "expr_stability",
+      "expression_stability",
+      "expr_pass",
+      "expression_pass"
+    ],
+    "spatial": [
+      "spatial",
+      "spatial_status",
+      "spatial_gate",
+      "spatial_stable",
+      "spatial_stability",
+      "spatial_pass",
+      "spatial_ok",
+      "spatial_support"
+    ]
+  },
+  "pareto_objectives": [
+    "lifetime",
+    "depth",
+    "block_coherence",
+    "expression_support",
+    "spatial_support"
+  ],
+  "mass_is_existence_veto": false,
+  "node_count_target": null,
+  "new_merges": false
+}

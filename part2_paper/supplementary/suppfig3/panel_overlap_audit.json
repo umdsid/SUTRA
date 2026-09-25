@@ -1,0 +1,12 @@
+{
+  "comparison": "hb-gbm",
+  "reference": "healthy_reference",
+  "comparison_sample": "gbm_reference_addon",
+  "reference_features": 541,
+  "comparison_features": 541,
+  "common_features": 541,
+  "reference_only": 0,
+  "comparison_only": 0,
+  "common_fraction_reference": 1.0,
+  "common_fraction_comparison": 1.0
+}

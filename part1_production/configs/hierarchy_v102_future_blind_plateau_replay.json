@@ -1,0 +1,40 @@
+{
+  "min_finite_fraction": 0.65,
+  "closure_lags": [
+    1,
+    2,
+    3
+  ],
+  "min_resolved_block_fraction": 0.7,
+  "min_resolved_blocks_absolute": 6,
+  "min_resolved_closure_lags": 2,
+  "recent_widths": [
+    3,
+    4,
+    5
+  ],
+  "history_widths": [
+    8,
+    12,
+    16
+  ],
+  "central_recent_width": 4,
+  "central_history_width": 12,
+  "velocity_ratio_max": 0.72,
+  "acceleration_ratio_max": 0.82,
+  "closure_ratio_max": 0.78,
+  "closure_support_required": 0.67,
+  "active_velocity_ratio_min": 0.95,
+  "active_closure_ratio_min": 0.95,
+  "entry_history_landmarks": 14,
+  "min_active_landmarks_before_entry": 3,
+  "persistence_landmarks": 5,
+  "confirmation_landmarks": 3,
+  "min_effective_nodes": 20,
+  "detector_min_removed_fraction": 0.1,
+  "detector_max_removed_fraction": 0.995,
+  "max_allowed_removed_fraction_drift": 0.12,
+  "min_grid_stop_fraction": 0.67,
+  "min_grid_alignment_fraction": 0.6,
+  "max_consensus_removed_iqr": 0.1
+}

@@ -1,0 +1,11 @@
+{
+  "sample": "healthy_reference",
+  "N0": 24406,
+  "u_source": "hierarchy_coordinate_removed_fraction (pre-step); removed_fraction_after (productive post-step)",
+  "productive_microsteps": 1840,
+  "terminal_microstep": 1840,
+  "terminal_merges": 13725,
+  "terminal_u": 0.5623617143325412,
+  "stop_reason": "no_contextually_admissible_boundaries",
+  "terminal_phi": 0.024461198066049333
+}

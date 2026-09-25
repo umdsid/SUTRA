@@ -1,0 +1,16 @@
+{
+  "covector": {
+    "scope": "Level-0 nodes",
+    "support": "v0.7.4.2 frozen positive communication support",
+    "channel_resolved": true,
+    "node_normalization": "total supported incident channel flux",
+    "molecular_components": "channel imbalance on receiver-minus-sender axes",
+    "mechanics_components": "zero"
+  },
+  "certification": {
+    "edge_storage_orientation_invariance": true,
+    "unsupported_edges_contribute_zero": true,
+    "dual_norm_against_symmetric_base": true,
+    "finsler_bound_scaling": "deferred to Step 3"
+  }
+}

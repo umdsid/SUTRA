@@ -1,0 +1,12 @@
+{
+  "merge_search_roots": [
+    "results/hierarchy_v093_full_completed_ultraslow_flow",
+    "results/hierarchy_v090_ultraslow_flow",
+    "results/hierarchy_v100_adaptive_ness_flow"
+  ],
+  "initial_label_search_roots": [
+    "results/hierarchy_v093_full_completed_ultraslow_flow",
+    "results/hierarchy_v100_adaptive_ness_flow"
+  ],
+  "dominant_mass_fraction": 0.8
+}

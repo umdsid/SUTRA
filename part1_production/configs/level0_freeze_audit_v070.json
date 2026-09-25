@@ -1,0 +1,21 @@
+{
+  "parallel_specimen_auditors": 3,
+  "require_step3_pass": true,
+  "require_upstream_hierarchy_mechanics_ready": true,
+  "checks": {
+    "all_measured_cells_retained": true,
+    "all_measured_features_retained": true,
+    "expression_matrix_sha256_exact": true,
+    "interface_references_valid": true,
+    "retention_patch_contains_no_mechanics": true,
+    "csr_reciprocal_and_endpoint_exact": true,
+    "certified_tension_exact_copy": true,
+    "certified_delta_p_exact_copy": true,
+    "upstream_certificate_sha256_exact": true,
+    "write_canonical_content_digests": true
+  },
+  "freeze_outputs": [
+    "freeze_audit.json per specimen",
+    "level0_freeze_certificate.json"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "strata_version": "1.1.1.2",
+  "production_stage": "hierarchy_v1100_frozen_production_rerun",
+  "repair_stage": "hierarchy_v1111_terminal_landscape_repair",
+  "samples": [
+    "healthy_reference",
+    "alzheimers",
+    "gbm_reference_addon",
+    "nondiseased_kidney",
+    "prcc"
+  ],
+  "parallel_specimens": 3,
+  "required_supports": [
+    "mass",
+    "expr",
+    "spatial"
+  ],
+  "support_aliases": {
+    "mass": [
+      "mass",
+      "mass_status",
+      "mass_gate",
+      "mass_stable",
+      "mass_stability",
+      "mass_pass",
+      "mass_ok"
+    ],
+    "expr": [
+      "expr",
+      "expression",
+      "expr_status",
+      "expression_status",
+      "expr_gate",
+      "expression_gate",
+      "expr_stable",
+      "expression_stable",
+      "expr_stability",
+      "expression_stability",
+      "expr_pass",
+      "expression_pass"
+    ],
+    "spatial": [
+      "spatial",
+      "spatial_status",
+      "spatial_gate",
+      "spatial_stable",
+      "spatial_stability",
+      "spatial_pass",
+      "spatial_ok"
+    ]
+  },
+  "evaluation_aliases": [
+    "evaluation_index",
+    "evaluation",
+    "eval",
+    "scientific_evaluation"
+  ],
+  "node_aliases": [
+    "nodes",
+    "n_nodes",
+    "node_count",
+    "active_nodes"
+  ],
+  "minimum_exact_join_coverage": 0.95,
+  "historical_stages": [
+    "hierarchy_v1061_full_landmark_materialization",
+    "hierarchy_v106_frozen_landmark_materialization",
+    "hierarchy_v105_basin_failure_pareto_audit",
+    "hierarchy_v104_persistence_basin_landmarks",
+    "hierarchy_v103_gate_decomposition_metastable_audit"
+  ],
+  "allow_threshold_invention": false,
+  "allow_nearest_imputation": false,
+  "new_merges": false,
+  "node_count_target": null
+}

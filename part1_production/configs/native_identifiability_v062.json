@@ -1,0 +1,7 @@
+{
+  "patch_size": 300,
+  "halo_hops": 1,
+  "workers": 8,
+  "small_gap_pixels": 64,
+  "medium_gap_pixels": 256
+}

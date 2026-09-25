@@ -1,0 +1,63 @@
+"""Patch materialization matching frozen v0.6.9 ownership."""
+
+from __future__ import annotations
+
+from ..biology import Patch
+from ..identifiers import CellID, PatchID, GraphID, InterfaceID
+from .validation import validate_patch
+
+
+def build_patches(
+    core_labels: list[set[int]],
+    label_to_barcode: dict[int, str],
+    barcode_to_cell_id: dict[str, CellID],
+    interface_owner_patch: dict[int, int],
+    graph_id: GraphID,
+    detached_cell_ids: tuple[CellID, ...] = (),
+) -> tuple[Patch, ...]:
+    """
+    Build one immutable Patch per frozen mechanics core.
+
+    An additional patch -1 is used only to retain measured cells that were
+    outside the mechanics primary component.  It owns no mechanical interface.
+    """
+    owned: dict[int, list[int]] = {}
+    for eid, pid in interface_owner_patch.items():
+        owned.setdefault(int(pid), []).append(int(eid))
+
+    out = []
+    for pid, labels in enumerate(core_labels):
+        cells = tuple(
+            sorted(
+                (barcode_to_cell_id[label_to_barcode[int(lab)]] for lab in labels),
+                key=int,
+            )
+        )
+        eids = tuple(InterfaceID(e) for e in sorted(owned.get(pid, [])))
+        p = Patch(
+            id=PatchID(pid),
+            graph_id=graph_id,
+            cell_ids=cells,
+            interface_ids=eids,
+            n_cells=len(cells),
+            n_interfaces=len(eids),
+        )
+        validate_patch(p)
+        out.append(p)
+
+    if detached_cell_ids:
+        p = Patch(
+            id=PatchID(-1),
+            graph_id=graph_id,
+            cell_ids=tuple(sorted(detached_cell_ids, key=int)),
+            interface_ids=(),
+            n_cells=len(detached_cell_ids),
+            n_interfaces=0,
+        )
+        validate_patch(p)
+        out.append(p)
+
+    return tuple(out)
+
+
+__all__ = ["build_patches"]

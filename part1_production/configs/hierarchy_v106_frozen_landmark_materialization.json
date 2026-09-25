@@ -1,0 +1,10 @@
+{
+  "principal_pareto_layer": 1,
+  "lsi_is_gate": false,
+  "lsi_components": [
+    "lifetime_ell",
+    "basin_depth",
+    "cross_block_coherence",
+    "pareto_layer"
+  ]
+}

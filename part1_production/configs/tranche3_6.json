@@ -1,0 +1,10 @@
+{
+  "mechanics_model": "exact polygonal vertex derivatives",
+  "min_cell_vertices": 3,
+  "max_cell_area_relative_error": 1.0,
+  "mean_tension_gauge": 1.0,
+  "mean_pressure_gauge": 0.0,
+  "tension_nonnegative": true,
+  "sample_workers": 3,
+  "strain": "excluded"
+}

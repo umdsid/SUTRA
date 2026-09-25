@@ -1,0 +1,21 @@
+{
+  "state_space": {
+    "molecular_coordinates": "all measured genes",
+    "mechanics_coordinates": [
+      "tension_z",
+      "delta_pressure_z"
+    ]
+  },
+  "symmetric_base": {
+    "molecular_block": "I + lambda_g L_func",
+    "mechanics_tension_weight": 1.0,
+    "mechanics_delta_p_weight": 1.0
+  },
+  "certification": {
+    "eig_floor": 1e-10,
+    "max_condition_number": 100000000.0,
+    "symmetry_tolerance": 1e-10
+  },
+  "directional_term_present": false,
+  "next_step": "channel-resolved directional covector"
+}

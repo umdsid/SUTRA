@@ -1,0 +1,11 @@
+{
+  "expression_search_roots": [
+    "results/hierarchy_v093_full_completed_ultraslow_flow",
+    "results/hierarchy_v091_network_exhaustive_completion",
+    "data"
+  ],
+  "min_expression_features": 20,
+  "max_expression_features": 512,
+  "large_mass_quantile": 0.9,
+  "high_heterogeneity_quantile": 0.75
+}

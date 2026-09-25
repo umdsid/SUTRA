@@ -1,0 +1,5 @@
+label_checkpoint_step,label_checkpoint_u,candidate_step,candidate_u,endpoint_a_column,endpoint_b_column,local_candidate_interfaces,local_admissible_interfaces
+0,0.0,0,0.0,super_i,super_j,860,276
+801,0.5135154826958106,801,0.5135154826958106,super_i,super_j,643,204
+1501,0.8441530054644809,1501,0.8441530054644809,super_i,super_j,435,77
+1841,1.0,1840,1.0,super_i,super_j,361,0

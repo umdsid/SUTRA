@@ -1,0 +1,33 @@
+{
+  "min_finite_fraction": 0.65,
+  "derivative_strides": [
+    1,
+    2,
+    3
+  ],
+  "causal_smoothing_windows": [
+    3,
+    5,
+    7
+  ],
+  "min_resolved_block_fraction": 0.7,
+  "min_resolved_blocks_absolute": 6,
+  "min_resolved_config_fraction": 0.67,
+  "min_resolved_configs_absolute": 6,
+  "min_calibrated_configs": 8,
+  "calibration_min_removed_fraction": 0.05,
+  "calibration_max_removed_fraction": 0.995,
+  "min_calibration_points_per_config": 30,
+  "velocity_low_quantile": 0.35,
+  "acceleration_low_quantile": 0.5,
+  "velocity_high_quantile": 0.8,
+  "acceleration_high_quantile": 0.8,
+  "stable_support_required": 0.6,
+  "high_support_required": 0.5,
+  "persistence_landmarks": 6,
+  "confirmation_landmarks": 4,
+  "min_effective_nodes": 20,
+  "detector_min_removed_fraction": 0.1,
+  "detector_max_removed_fraction": 0.995,
+  "max_allowed_removed_fraction_drift": 0.12
+}

@@ -1,0 +1,286 @@
+{
+  "stages": [
+    {
+      "id": "gateB",
+      "required_outputs": [
+        "results/tranche2_1_gateB"
+      ],
+      "runner_candidates": [
+        "run_five_sample_gateB.sh"
+      ]
+    },
+    {
+      "id": "geometry_native",
+      "required_outputs": [
+        "results/production_geometry"
+      ],
+      "runner_candidates": [
+        "run_full_geometry_mechanics.sh"
+      ]
+    },
+    {
+      "id": "geometry_radius5",
+      "required_outputs": [
+        "results/production_geometry_r5"
+      ],
+      "runner_candidates": [
+        "run_radius5_vmsi_gateC.sh"
+      ]
+    },
+    {
+      "id": "geometry_connected",
+      "required_outputs": [
+        "results/production_geometry_r5_connected"
+      ],
+      "runner_candidates": [
+        "run_connectivity_vmsi_gateC.sh"
+      ]
+    },
+    {
+      "id": "mechanics_final",
+      "required_outputs": [
+        "results/production_mechanics_v069"
+      ],
+      "runner_candidates": [
+        "run_finalize_mechanics_v0691.sh"
+      ]
+    },
+    {
+      "id": "level0_freeze",
+      "required_outputs": [
+        "results/hierarchy_level0_v070"
+      ],
+      "runner_candidates": [
+        "run_level0_step3_v070.sh",
+        "run_hierarchy_level0_step3_v070.sh"
+      ]
+    },
+    {
+      "id": "h071",
+      "required_outputs": [
+        "results/hierarchy_v071_active_blocks"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v071_active_blocks.sh"
+      ]
+    },
+    {
+      "id": "h072",
+      "required_outputs": [
+        "results/hierarchy_v072_short_pilot"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v072_short_pilot.sh"
+      ]
+    },
+    {
+      "id": "h073",
+      "required_outputs": [
+        "results/hierarchy_v073_full"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v073_full.sh"
+      ]
+    },
+    {
+      "id": "h074",
+      "required_outputs": [
+        "results/hierarchy_v074_effective_flow"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v074_effective_flow.sh"
+      ]
+    },
+    {
+      "id": "h0741",
+      "required_outputs": [
+        "results/hierarchy_v0741_effective_flow"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v0741_effective_flow.sh"
+      ]
+    },
+    {
+      "id": "h0742",
+      "required_outputs": [
+        "results/hierarchy_v0742_effective_flow"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v0742_effective_flow.sh"
+      ]
+    },
+    {
+      "id": "h0743",
+      "required_outputs": [
+        "results/hierarchy_v0743_channel_direction_audit"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v0743_channel_direction_audit.sh"
+      ]
+    },
+    {
+      "id": "h075",
+      "required_outputs": [
+        "results/hierarchy_v075_local_geometry"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v075_local_geometry.sh",
+        "run_hierarchy_v075_local_geometry_all.sh",
+        "run_hierarchy_v075_local_geometry_step4.sh"
+      ]
+    },
+    {
+      "id": "h076",
+      "required_outputs": [
+        "results/hierarchy_v076_geometry_aware"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v076_geometry_aware.sh"
+      ]
+    },
+    {
+      "id": "h0761",
+      "required_outputs": [
+        "results/hierarchy_v0761_pressure_tail_audit"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v0761_pressure_tail_audit.sh"
+      ]
+    },
+    {
+      "id": "h0762",
+      "required_outputs": [
+        "results/hierarchy_v0762_pressure_field"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v0762_pressure_field_finalize.sh"
+      ]
+    },
+    {
+      "id": "h077",
+      "required_outputs": [
+        "results/hierarchy_v077_discrete_transport"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v077_discrete_transport.sh"
+      ]
+    },
+    {
+      "id": "h078",
+      "required_outputs": [
+        "results/hierarchy_v078_transport_holonomy"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v078_transport_holonomy.sh"
+      ]
+    },
+    {
+      "id": "h079",
+      "required_outputs": [
+        "results/hierarchy_v079_loop_normalized_geometry"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v079_loop_normalized_geometry.sh"
+      ]
+    },
+    {
+      "id": "h090",
+      "required_outputs": [
+        "results/hierarchy_v090_ultraslow_flow"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v090_ultraslow_flow.sh"
+      ]
+    },
+    {
+      "id": "h091",
+      "required_outputs": [
+        "results/hierarchy_v091_network_exhaustive_completion"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v091_network_exhaustive_completion.sh"
+      ]
+    },
+    {
+      "id": "h092",
+      "required_outputs": [
+        "results/hierarchy_v092_step_spectrum_consistency"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v092_step_spectrum_consistency.sh"
+      ]
+    },
+    {
+      "id": "h093",
+      "required_outputs": [
+        "results/hierarchy_v093_full_completed_ultraslow_flow"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v093_full_completed_ultraslow_flow.sh"
+      ]
+    },
+    {
+      "id": "h1100",
+      "required_outputs": [
+        "results/hierarchy_v1100_frozen_production_rerun"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v1100_frozen_production.sh"
+      ]
+    },
+    {
+      "id": "h111",
+      "required_outputs": [
+        "results/hierarchy_v111_terminal_landscape_audit"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v111_terminal_landscape_audit.sh"
+      ]
+    },
+    {
+      "id": "h1111",
+      "required_outputs": [
+        "results/hierarchy_v1111_terminal_landscape_repair"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v1111_terminal_landscape_repair.sh"
+      ]
+    },
+    {
+      "id": "h1112",
+      "required_outputs": [
+        "results/hierarchy_v1112_support_provenance_recovery"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v1112_support_provenance_recovery.sh"
+      ]
+    },
+    {
+      "id": "h1113",
+      "required_outputs": [
+        "results/hierarchy_v1113_exact_frozen_terminal_replay"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v1113_exact_frozen_terminal_replay.sh"
+      ]
+    },
+    {
+      "id": "h112",
+      "required_outputs": [
+        "results/hierarchy_v112_final_supported_hierarchy_landscape"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v112_final_supported_landscape.sh"
+      ]
+    },
+    {
+      "id": "h120",
+      "required_outputs": [
+        "results/hierarchy_v120_merger_driver_atlas"
+      ],
+      "runner_candidates": [
+        "run_hierarchy_v120_merger_driver_atlas.sh"
+      ]
+    }
+  ]
+}

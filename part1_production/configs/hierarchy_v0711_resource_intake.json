@@ -1,0 +1,20 @@
+{
+  "functional_collections": [
+    "MSigDB Hallmark",
+    "MSigDB Reactome",
+    "MSigDB GO Biological Process"
+  ],
+  "functional_preferred_version": "2025.1.Hs",
+  "cellchat": {
+    "native_file": "interaction_input_CellChatDB.csv",
+    "spatial_type_mapping": {
+      "Cell-Cell Contact": "contact",
+      "Secreted Signaling": "diffusible"
+    },
+    "ECM-Receptor": "audit_only_in_v0.7.1.1",
+    "complex_entities": "do_not_explode_in_v0.7.1.1"
+  },
+  "snapshot_root": "resources/strata_hierarchy_v0711",
+  "copy_policy": "exact byte copy + SHA256",
+  "role_separation": true
+}

@@ -1,0 +1,17 @@
+{
+  "diagnostic_only": true,
+  "pressure_residual": "B p - delta_p",
+  "tail_statistics": [
+    "median",
+    "q95",
+    "q99",
+    "q99.9",
+    "max",
+    "RMS"
+  ],
+  "robust_extreme_rule": "abs(r) > max(q99.9, median + 50*(q95-median))",
+  "component_localization": true,
+  "level1_selected_merge_enrichment": true,
+  "modifies_geometry": false,
+  "modifies_hierarchy": false
+}

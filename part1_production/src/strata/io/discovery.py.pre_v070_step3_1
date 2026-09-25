@@ -1,0 +1,11 @@
+from pathlib import Path
+
+def discover_samples(data_root):
+    root = Path(data_root)
+    out = []
+    for d in sorted([p for p in root.iterdir() if p.is_dir()]):
+        b = list(d.rglob("*cell_boundaries*.parquet")) + list(d.rglob("*cell_boundaries*.parquet.gz"))
+        if not b:
+            continue
+        out.append({"sample": d.name, "root": d, "cell_boundaries": b[0]})
+    return out

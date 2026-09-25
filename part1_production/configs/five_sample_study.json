@@ -1,0 +1,46 @@
+{
+  "study": "STRATA five-specimen production",
+  "version": "1.3.0",
+  "samples": [
+    {
+      "id": "healthy_reference",
+      "cohort": "brain",
+      "condition": "non-diseased brain"
+    },
+    {
+      "id": "alzheimers",
+      "cohort": "brain",
+      "condition": "Alzheimer's disease"
+    },
+    {
+      "id": "gbm_reference_addon",
+      "cohort": "brain",
+      "condition": "glioblastoma"
+    },
+    {
+      "id": "nondiseased_kidney",
+      "cohort": "kidney",
+      "condition": "non-diseased kidney"
+    },
+    {
+      "id": "prcc",
+      "cohort": "kidney",
+      "condition": "papillary renal cell carcinoma"
+    }
+  ],
+  "comparisons": {
+    "brain": [
+      "healthy_reference",
+      "alzheimers",
+      "gbm_reference_addon"
+    ],
+    "kidney": [
+      "nondiseased_kidney",
+      "prcc"
+    ]
+  },
+  "cross_tissue_biological_comparison": false,
+  "all_cells_level0": true,
+  "all_measured_genes_level0": true,
+  "fresh_production_required": true
+}

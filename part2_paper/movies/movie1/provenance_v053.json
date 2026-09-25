@@ -1,0 +1,39 @@
+{
+  "renderer": "v0.5.3",
+  "hierarchy_rerun": false,
+  "fixed_Level0_coordinates": true,
+  "pluck_is_visual_duplicate_only": true,
+  "pluck_stage_reserved_outside_specimen": true,
+  "right_panel_static_during_mergers": true,
+  "right_panel_removed": true,
+  "persistent_bottom_information_strip": true,
+  "merger_guide_after_arrival_only": true,
+  "source_locator": "exact member footprint only; no bounding rectangle",
+  "complete_tissue": true,
+  "equal_physical_aspect": true,
+  "visual_interpolation": "none; exact cached hierarchy states are held discretely; no cross-fade, cell motion, or biological intermediate states",
+  "samples": {
+    "healthy_reference": {
+      "N0": 24406,
+      "terminal_u": 0.5623617143325412,
+      "checkpoints": 39,
+      "highlight_events": 8,
+      "frames": 2802,
+      "fps": 30,
+      "duration_seconds": 93.4,
+      "final_hold_seconds": 3.0,
+      "event_inset_phases": [
+        "exact-shape pluck",
+        "pre-merger",
+        "accepted merger",
+        "resulting object"
+      ],
+      "native_extent": {
+        "x_min": -186.818520359993,
+        "x_max": 7817.371109585762,
+        "y_min": -104.42215775489807,
+        "y_max": 5935.895555200576
+      }
+    }
+  }
+}

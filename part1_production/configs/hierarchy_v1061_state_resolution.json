@@ -1,0 +1,25 @@
+{
+  "scan_result_roots": [
+    "hierarchy_v093_full_completed_ultraslow_flow",
+    "hierarchy_v094_ness_flow_diagnostics",
+    "hierarchy_v079_loop_normalized_geometry",
+    "hierarchy_v078_transport_holonomy",
+    "hierarchy_v077_discrete_transport",
+    "hierarchy_v0762_pressure_field",
+    "hierarchy_v091_network_exhaustive_completion"
+  ],
+  "required_observable_groups": [
+    "expression",
+    "functional",
+    "cellchat",
+    "mechanics",
+    "pressure",
+    "topology",
+    "directional_geometry",
+    "transport",
+    "geodesics",
+    "holonomy",
+    "derivatives"
+  ],
+  "require_node_state": true
+}

@@ -1,0 +1,16 @@
+{
+  "v104_min_basin_landmarks": 3,
+  "v104_min_cross_block_coherence": 0.5,
+  "coherence_threshold_audit_grid": [
+    0.2,
+    0.3,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.7,
+    0.8
+  ],
+  "max_pareto_layers": 8
+}

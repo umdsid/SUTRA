@@ -1,0 +1,29 @@
+{
+  "admissibility": "unchanged v0.7.4.2 conjunctive biological gate",
+  "geometry": {
+    "state": "effective molecular + reconstructed mechanical coordinates",
+    "pair_cost": "0.5*(F_A(z_B-z_A)+F_B(z_A-z_B))",
+    "orientation_invariant": true,
+    "directionality_retained": true,
+    "ordering": "ascending pair cost"
+  },
+  "mechanics_state": {
+    "tension": "mean incident certified standardized tension",
+    "pressure": "minimum-norm sparse potential satisfying certified signed delta-p constraints"
+  },
+  "supernode_propagation": {
+    "molecular": "mean",
+    "mechanics": "mean over observed members",
+    "directional_covector": "cell-count weighted mean"
+  },
+  "termination": "natural exhaustion",
+  "max_levels_safety": 250,
+  "statistics": {
+    "all_candidate_geometry": true,
+    "geometry_vs_baseline_matching_overlap": true,
+    "directional_correction": true,
+    "reversal_ratio": true,
+    "unit_kappa_directional_correction": true,
+    "figure_ready": true
+  }
+}

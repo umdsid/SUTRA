@@ -1,0 +1,6 @@
+{
+  "raster_max_pixels": 8000000,
+  "tissue_intensity_quantile": 0.35,
+  "morphology_downsample_max_dim": 2500,
+  "min_internal_hole_pixels": 8
+}

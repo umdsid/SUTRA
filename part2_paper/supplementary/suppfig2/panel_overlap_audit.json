@@ -1,0 +1,12 @@
+{
+  "comparison": "hb-ad",
+  "reference": "healthy_reference",
+  "comparison_sample": "alzheimers",
+  "reference_features": 541,
+  "comparison_features": 541,
+  "common_features": 451,
+  "reference_only": 90,
+  "comparison_only": 90,
+  "common_fraction_reference": 0.833641404805915,
+  "common_fraction_comparison": 0.833641404805915
+}

@@ -1,0 +1,11 @@
+{
+  "sample": "gbm_reference_addon",
+  "N0": 40887,
+  "u_source": "hierarchy_coordinate_removed_fraction (pre-step); removed_fraction_after (productive post-step)",
+  "productive_microsteps": 2127,
+  "terminal_microstep": 2127,
+  "terminal_merges": 25153,
+  "terminal_u": 0.6151833100985643,
+  "stop_reason": "no_contextually_admissible_boundaries",
+  "terminal_phi": 0.14283268520556655
+}

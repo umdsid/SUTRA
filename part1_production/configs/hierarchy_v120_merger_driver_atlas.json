@@ -1,0 +1,23 @@
+{
+  "strata_version": "1.2.0",
+  "samples": [
+    "healthy_reference",
+    "alzheimers",
+    "gbm_reference_addon",
+    "nondiseased_kidney",
+    "prcc"
+  ],
+  "parallel_specimens": 3,
+  "final_landscape_stage": "hierarchy_v112_final_supported_hierarchy_landscape",
+  "production_stage": "hierarchy_v1100_frozen_production_rerun",
+  "exact_lineage_stage": "hierarchy_v10931_ordered_merge_shard_replay",
+  "level0_stage": "hierarchy_level0_v070",
+  "minimum_cells_per_component_for_expression": 5,
+  "max_genes_for_pairwise_driver_scan": 5000,
+  "top_genes_per_transition": 50,
+  "control_pairs_per_merged_pair": 3,
+  "random_seed": 120,
+  "new_merges": false,
+  "hierarchy_changed": false,
+  "thresholds_modified": false
+}

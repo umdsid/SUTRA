@@ -1,0 +1,10 @@
+{
+  "basin_shoulder_multiplier": 1.75,
+  "basin_absolute_floor": 0.08,
+  "min_basin_landmarks": 3,
+  "shoulder_window": 4,
+  "basin_overlap_dedup": 0.65,
+  "closure_ratio_max": 0.78,
+  "block_stable_fraction_required": 0.5,
+  "min_cross_block_coherence": 0.5
+}

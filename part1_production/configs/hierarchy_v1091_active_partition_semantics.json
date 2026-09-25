@@ -1,0 +1,16 @@
+{
+  "source_search_roots": [
+    "data",
+    "results",
+    "resources"
+  ],
+  "source_extensions": [
+    ".parquet",
+    ".h5",
+    ".hdf5",
+    ".h5ad",
+    ".npz",
+    ".csv",
+    ".csv.gz"
+  ]
+}

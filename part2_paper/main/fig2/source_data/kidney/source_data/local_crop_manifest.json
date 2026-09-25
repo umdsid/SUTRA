@@ -1,0 +1,19 @@
+{
+  "cx": 5540.3243512068475,
+  "cy": 992.3379586109093,
+  "xmin": 5330.249451117856,
+  "xmax": 5750.399251295839,
+  "ymin": 782.2630585219179,
+  "ymax": 1202.4128586999007,
+  "side_length": 420.14980017798285,
+  "n_level0_cells": 900,
+  "target_cells": 900,
+  "grid_occupancy_fraction": 1.0,
+  "row_fill_fraction": 1.0,
+  "column_fill_fraction": 1.0,
+  "selection_score": 1.0,
+  "selection_basis": "Level-0 geometry only: square occupancy, axis fill, and readable cell count",
+  "initial_units_local_posthoc": 900,
+  "terminal_units_local_posthoc": 454,
+  "local_reduction_posthoc": 0.4955555555555555
+}
