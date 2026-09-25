@@ -30,10 +30,19 @@ DATA = ROOT / "data" / SAMPLE
 CELL_FILE = DATA / "cells.parquet"
 BOUNDARY_FILE = DATA / "cell_boundaries.parquet"
 
+HIERARCHY_ROOT = Path(
+    os.environ.get(
+        "SUTRA_HIERARCHY_ROOT",
+        str(
+            ROOT
+            / "results"
+            / "hierarchy_v0911_specimen_local_contextual_flow"
+        ),
+    )
+)
+
 LEDGER = (
-    ROOT
-    / "results"
-    / "hierarchy_v0911_specimen_local_contextual_flow"
+    HIERARCHY_ROOT
     / "ledger"
     / SAMPLE
 )

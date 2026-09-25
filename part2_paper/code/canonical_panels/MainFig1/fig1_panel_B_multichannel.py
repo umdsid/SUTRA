@@ -28,10 +28,19 @@ SAMPLE = "healthy_reference"
 CELL_FILE = ROOT / "data" / SAMPLE / "cells.parquet"
 BOUNDARY_FILE = ROOT / "data" / SAMPLE / "cell_boundaries.parquet"
 
+HIERARCHY_ROOT = Path(
+    os.environ.get(
+        "SUTRA_HIERARCHY_ROOT",
+        str(
+            ROOT
+            / "results"
+            / "hierarchy_v0911_specimen_local_contextual_flow"
+        ),
+    )
+)
+
 LEVEL0_FILE = (
-    ROOT
-    / "results"
-    / "hierarchy_v0911_specimen_local_contextual_flow"
+    HIERARCHY_ROOT
     / "ledger"
     / SAMPLE
     / "candidate_boundaries"
