@@ -274,12 +274,6 @@ def make(
         ),
     )
 
-    # FIG1_BOXPLOT_ZERO_CLEARANCE
-    _box_ymin, _box_ymax = ax.get_ylim()
-    _box_span = _box_ymax - _box_ymin
-    _box_pad = 0.04 * _box_span
-    ax.set_ylim(min(_box_ymin, 0.0) - _box_pad, _box_ymax)
-
     for box in bp["boxes"]:
 
         box.set(
@@ -289,8 +283,10 @@ def make(
             linewidth=1.1,
         )
 
+    # Keep the zero-percentile baseline visibly above the lower frame.
+    # This is display clearance only; percentile values are unchanged.
     ax.set_ylim(
-        0,
+        -4,
         100,
     )
 
