@@ -39,9 +39,22 @@
       "assembled_figure": false
     },
     "MainFig2": {
-      "status": "STAGED",
+      "status": "STAGED_COMPLETE",
+      "mode": "standalone_panels",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
       "source": "fig2_generate_panels.py",
-      "copy": "MainFig2/fig2_generate_panels.py"
+      "copy": "MainFig2/fig2_generate_panels.py",
+      "assembled_figure": false,
+      "scientific_recalculation": false
     },
     "MainFig3": {
       "status": "STAGED",
