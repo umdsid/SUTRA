@@ -76,9 +76,20 @@
       "hierarchy_rerun": false
     },
     "MainFig4": {
-      "status": "STAGED",
-      "source": "make_fig4_v4_10_1.py",
-      "copy": "MainFig4/make_fig4_v4_10_1.py"
+      "status": "STAGED_COMPLETE",
+      "mode": "standalone_panels",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "source": "render_main_fig4.py",
+      "copy": "MainFig4/render_main_fig4.py",
+      "assembled_figure": false,
+      "scientific_recalculation": false,
+      "hierarchy_rerun": false
     },
     "MainFig5": {
       "status": "STAGED",

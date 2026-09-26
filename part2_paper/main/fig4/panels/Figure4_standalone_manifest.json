@@ -1,0 +1,22 @@
+{
+  "figure": "MainFig4",
+  "mode": "standalone_panels",
+  "panels": [
+    "Fig4A",
+    "Fig4B",
+    "Fig4C",
+    "Fig4D",
+    "Fig4E"
+  ],
+  "assembled_figure": false,
+  "scientific_recalculation": false,
+  "inputs": [
+    "brain_hrm_matched_trajectory.csv",
+    "brain_hrm_terminal_summary.csv",
+    "kidney_hrm_matched_trajectory.csv",
+    "kidney_hrm_terminal_summary.csv",
+    "brain_u055_exact_partitions.parquet",
+    "brain_u055_partition_materialization.json",
+    "brain_level0_cells.parquet"
+  ]
+}

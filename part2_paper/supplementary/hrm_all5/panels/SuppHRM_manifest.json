@@ -1,0 +1,19 @@
+{
+  "figure": "SuppHRM_All5",
+  "status": "STAGED_COMPLETE",
+  "mode": "standalone_panels",
+  "panels": [
+    "SuppHRM_A",
+    "SuppHRM_B",
+    "SuppHRM_C",
+    "SuppHRM_D",
+    "SuppHRM_E",
+    "SuppHRM_F"
+  ],
+  "assembled_figure": false,
+  "scientific_recalculation": false,
+  "source": "MainFig4 frozen HRM tables",
+  "normalization": "metric-specific common normalization across all five specimens",
+  "brain_kidney_separate": "A-C brain; D-E kidney; F integrated terminal summary",
+  "terminal_contract": "50/50 construction-rule perturbations terminated with no contextually admissible boundaries remaining"
+}

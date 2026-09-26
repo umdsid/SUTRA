@@ -1,0 +1,18 @@
+{
+  "sample": "healthy_reference",
+  "target_removed_fraction": 0.55,
+  "case": "eps_rescue_high_soft_early",
+  "level0_cells": 24406,
+  "REL": "results/hierarchy_v0911_specimen_local_contextual_flow",
+  "reference_actual_removed_fraction": 0.5541260345816602,
+  "reference_microstep": 79,
+  "perturbed_actual_removed_fraction": 0.555601081701221,
+  "perturbed_microstep": 46,
+  "VI_bits_recomputed": 0.4029280693148536,
+  "VI_bits_hrm_table": 0.4029280693148571,
+  "VI_abs_error": 3.497202527569243e-15,
+  "reference_ledger": "HRM_v0923/runs/reference/results/hierarchy_v0911_specimen_local_contextual_flow/ledger/healthy_reference",
+  "perturbed_ledger": "HRM_v0923/runs/eps_rescue_high_soft_early/results/hierarchy_v0911_specimen_local_contextual_flow/ledger/healthy_reference",
+  "hierarchy_rerun": false,
+  "path_note": "Ledger locations are provenance-relative identifiers; absolute development-machine prefixes were removed for the public release."
+}
