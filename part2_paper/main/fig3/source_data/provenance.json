@@ -1,5 +1,5 @@
 {
-  "source_ledger": "/Users/sid/Desktop/SUTRA/results/_archive_pre_pressure_safe_v12_20260923_164114/hierarchy_v0911_specimen_local_contextual_flow/ledger",
+  "source_ledger": "frozen_source:results/_archive_pre_pressure_safe_v12_20260923_164114/hierarchy_v0911_specimen_local_contextual_flow/ledger",
   "hierarchy_rerun": false,
   "aggregation_null_reps": 1000,
   "aggregation_null_seed_base": 20260924,
@@ -12,8 +12,8 @@
       "incoming_n": 130,
       "post_n": 378,
       "terminal_u": 0.5623617143325412,
-      "cells_source": "/Users/sid/Desktop/SUTRA/results/_archive_pre_pressure_safe_v12_20260923_164114/hierarchy_level0_v070/healthy_reference/cells.parquet",
-      "expression_root": "/Users/sid/Desktop/SUTRA/results/_archive_pre_pressure_safe_v12_20260923_164114/hierarchy_level0_v070/healthy_reference"
+      "cells_source": "frozen_source:results/_archive_pre_pressure_safe_v12_20260923_164114/hierarchy_level0_v070/healthy_reference/cells.parquet",
+      "expression_root": "frozen_source:results/_archive_pre_pressure_safe_v12_20260923_164114/hierarchy_level0_v070/healthy_reference"
     },
     "nondiseased_kidney": {
       "N0": 97560,
@@ -23,8 +23,8 @@
       "incoming_n": 2659,
       "post_n": 10030,
       "terminal_u": 0.5767527675276752,
-      "cells_source": "/Users/sid/Desktop/SUTRA/results/_archive_pre_pressure_safe_v12_20260923_164114/hierarchy_level0_v070/nondiseased_kidney/cells.parquet",
-      "expression_root": "/Users/sid/Desktop/SUTRA/results/_archive_pre_pressure_safe_v12_20260923_164114/hierarchy_level0_v070/nondiseased_kidney"
+      "cells_source": "frozen_source:results/_archive_pre_pressure_safe_v12_20260923_164114/hierarchy_level0_v070/nondiseased_kidney/cells.parquet",
+      "expression_root": "frozen_source:results/_archive_pre_pressure_safe_v12_20260923_164114/hierarchy_level0_v070/nondiseased_kidney"
     }
   }
 }

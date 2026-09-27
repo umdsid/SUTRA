@@ -1,0 +1,8 @@
+{
+  "figure": "MainFig5",
+  "mode": "standalone_panels",
+  "assembled_figure": false,
+  "scientific_recalculation": false,
+  "panel_C": "frozen V6 exact copy",
+  "panel_E_note": "module-level trajectory uses previously audited frozen summary; exact 19-gene membership recovery not required for this panel"
+}

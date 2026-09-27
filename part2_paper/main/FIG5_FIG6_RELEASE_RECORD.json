@@ -1,0 +1,180 @@
+{
+  "release": "MainFig5_MainFig6_v1_5_3_5",
+  "files": [
+    {
+      "path": "part2_paper/main/fig5/audit.csv",
+      "sha256": "f620898fbff4a0871b3118acc63a310be1ab82f838e8eba4932f3f5f089268fb",
+      "bytes": 131
+    },
+    {
+      "path": "part2_paper/main/fig5/manifest.json",
+      "sha256": "58dacebaf04c18d6412735e16e326220bc43018f5b5374facd5a99778c469754",
+      "bytes": 307
+    },
+    {
+      "path": "part2_paper/main/fig5/panels/panel_A.pdf",
+      "sha256": "de4d975a7a1e0c963568cb34e7ffc223b71e53509d99e1ceda2de8076cd12430",
+      "bytes": 15086
+    },
+    {
+      "path": "part2_paper/main/fig5/panels/panel_A.png",
+      "sha256": "ffbcafe3e967d5f31516f21291123a8fbb3a8046084cdd3bd06c59242c6b0041",
+      "bytes": 93940
+    },
+    {
+      "path": "part2_paper/main/fig5/panels/panel_B.pdf",
+      "sha256": "71a9a2bc18c2ed735f312df6aa4bdcfaa3bdb416c102d2884f6601fd2eb55eca",
+      "bytes": 17013
+    },
+    {
+      "path": "part2_paper/main/fig5/panels/panel_B.png",
+      "sha256": "916df89c58d855220e6c0eb5526cf7b9c4eaa14a1188982dcbe09c2634778c92",
+      "bytes": 153130
+    },
+    {
+      "path": "part2_paper/main/fig5/panels/panel_C.pdf",
+      "sha256": "85059af8a3602a4fb0398a823eb36ae7ce9d6c44dffe5dcaf9da75258c968023",
+      "bytes": 505734
+    },
+    {
+      "path": "part2_paper/main/fig5/panels/panel_C.png",
+      "sha256": "6ec36522c0bc50f09ea56e38bd5b505d50303324ba3caca84ed3e5c53e6a29d0",
+      "bytes": 792430
+    },
+    {
+      "path": "part2_paper/main/fig5/panels/panel_D.pdf",
+      "sha256": "388125a2451783e3bbb3c64aa0c0c047f943375454eedfc1ca43ec3f9af76a48",
+      "bytes": 19184
+    },
+    {
+      "path": "part2_paper/main/fig5/panels/panel_D.png",
+      "sha256": "2dc14d403b09cf3a571f13d6ce07f1f80bc6a20073b600810688312285fabb60",
+      "bytes": 110727
+    },
+    {
+      "path": "part2_paper/main/fig5/panels/panel_E.pdf",
+      "sha256": "bdd5fc24281c7da898bfdda2427ee73ab9f27b39e38d6c76dc496dc8fd703538",
+      "bytes": 79930
+    },
+    {
+      "path": "part2_paper/main/fig5/panels/panel_E.png",
+      "sha256": "ff9f82c214e821b18ff67df22403f94ac95862a7dd0d0135282454bc28b2a3d8",
+      "bytes": 1202749
+    },
+    {
+      "path": "part2_paper/main/fig5/source_data/panel_D_classification_audit.csv",
+      "sha256": "df937906c665651aac4d36ebc79d958d4ba80c3112a001f58bc0937d20d7f2c1",
+      "bytes": 5071
+    },
+    {
+      "path": "part2_paper/main/fig5/source_data/panel_D_nonfinite_audit.csv",
+      "sha256": "df3e86846b26ba72062f51ea57401983dfbd0fc2f143182763d56a091f8a8d04",
+      "bytes": 141
+    },
+    {
+      "path": "part2_paper/main/fig5/source_data/panel_D_not_evaluable_territories.csv",
+      "sha256": "990123efeed5993be597ec15d11407368093de75b77dc8e905a0a493fc92291a",
+      "bytes": 350
+    },
+    {
+      "path": "part2_paper/main/fig5/source_data/panel_D_render_matrix_96x3.csv",
+      "sha256": "49ea72a67b52d2ba4046437905cc161cd973bbb3cc884075b7c7073d14175fb0",
+      "bytes": 8585
+    },
+    {
+      "path": "part2_paper/main/fig5/source_data/panel_E_gene_trajectory_ranking.csv",
+      "sha256": "20c5ebe91c0fee14159275c88b48225e86a83fd91fe6b6cfefbf45f5af67c4d9",
+      "bytes": 87961
+    },
+    {
+      "path": "part2_paper/main/fig5/source_data/panel_E_highlighted_genes.csv",
+      "sha256": "c6a484adf0685446f65f09ef9fb572ba5d357cd1f5063f71b8d3c08935d6f4f1",
+      "bytes": 2180
+    },
+    {
+      "path": "part2_paper/main/fig6/audit.csv",
+      "sha256": "aaddf54e6169f6fb96e21211087cb33aaa9a7ded36d64951ef24970a4cda9f8e",
+      "bytes": 140
+    },
+    {
+      "path": "part2_paper/main/fig6/manifest.json",
+      "sha256": "5c63362212c7ab2933abeb6d0ddb813478e27eb0538a7b1efaafc0d9eebe7b44",
+      "bytes": 351
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_A.pdf",
+      "sha256": "6d59a80cd9ff6ea157ddcefe1e2fe7c20269022b4b54ba72439af157ba91e024",
+      "bytes": 213039
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_A.png",
+      "sha256": "ab27201ed7fd9ac0bebe1ce70f44b2fdc4a7c3768979897c500ec8cd390d5b8d",
+      "bytes": 2313330
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_B.pdf",
+      "sha256": "56b34fe16c7b1456584757f232a1e87bc07cb9195679287541a3a5264f838d6b",
+      "bytes": 131792
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_B.png",
+      "sha256": "c30acb0e05de027aa348eb459e5c9946b652d7ce1dc5ca88b1251260131206c8",
+      "bytes": 1715128
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_C.pdf",
+      "sha256": "a5e24db47af6abb3e41a211d11f42149d8378dff4349c0ad4143bc104b0c9c21",
+      "bytes": 18991
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_C.png",
+      "sha256": "47631563cc650709c27568f0721344fd9ecd7b886c9572b0c5ce2a0c75071e32",
+      "bytes": 153141
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_D.pdf",
+      "sha256": "0b633cc620081fa1067a59eee310e1c0112d56544fce92daa35246f9a90a3ac2",
+      "bytes": 19788
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_D.png",
+      "sha256": "728dedea9f60c367f6063631131ac890ec517196ed92fd81f49c30304157bd2f",
+      "bytes": 162617
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_E.pdf",
+      "sha256": "b515592ce4db81105cc0e5508169635c089188f86dadb73106c24693ad3a8f3f",
+      "bytes": 14622
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_E.png",
+      "sha256": "f17b34931b14ff4d1cd4b98ca752e030754f704da9b4964b1ff73d22224a5e37",
+      "bytes": 199417
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_F.pdf",
+      "sha256": "bac6cdc0dc376e5920d819c7f4b3c56ea41a37a28fa6ea74160d3b53df407dbe",
+      "bytes": 27713
+    },
+    {
+      "path": "part2_paper/main/fig6/panels/panel_F.png",
+      "sha256": "a435e465fe05fdea8b4ea6408b805c35f35175b3b005cc8c8002c427f058a738",
+      "bytes": 152335
+    },
+    {
+      "path": "part2_paper/main/fig6/source_data/source_performance_all_selected.csv",
+      "sha256": "ef6efa779385768539c0ad08840f12f9995393a47604d66b7d922dee889a3e33",
+      "bytes": 45436
+    },
+    {
+      "path": "part2_paper/main/fig6/source_data/source_performance_means_selected.csv",
+      "sha256": "ea00180f81e2d4a59a708a54c845208787d50adb98d4780cd821d3074fc1dd8c",
+      "bytes": 9074
+    },
+    {
+      "path": "part2_paper/main/fig6/source_data/source_permutation_importance_selected.csv",
+      "sha256": "faaeec88045291d554962a4c4b70bce9b2eb2b1cee3b4c7713baa6ae1df02432",
+      "bytes": 25724
+    }
+  ]
+}

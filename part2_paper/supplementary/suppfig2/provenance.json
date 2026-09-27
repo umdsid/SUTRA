@@ -1,7 +1,7 @@
 {
   "figure_family": "disease collective organization",
   "comparison": "hb-ad",
-  "hierarchy_source": "/Users/sid/Desktop/SUTRA/results/hierarchy_v0911_specimen_local_contextual_flow/ledger",
+  "hierarchy_source": "frozen_source:results/hierarchy_v0911_specimen_local_contextual_flow/ledger",
   "hierarchy_rerun": false,
   "aggregation_null": {
     "reps": 250,

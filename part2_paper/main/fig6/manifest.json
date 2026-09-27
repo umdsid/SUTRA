@@ -1,0 +1,10 @@
+{
+  "figure": "MainFig6",
+  "source": "frozen_source:Fig6_Consolidation_Prediction/restricted_dense_v4",
+  "mode": "standalone_panels",
+  "assembled_figure": false,
+  "scientific_recalculation": false,
+  "spatial_maps": "out-of-fold predictions only",
+  "hierarchy_updated_predictors_used": false,
+  "biological_time_claim": false
+}
