@@ -1,0 +1,25 @@
+{
+  "figure": "Supplementary Figure 1",
+  "mode": "standalone_panels",
+  "panels": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "assembled_figure": false,
+  "hierarchy_rerun": false,
+  "scientific_recalculation": false,
+  "display_revision": "V1.4 final visual repair: C organ labels outside data field; E zero-admissibility markers given unclipped baseline clearance; A/B grouped bars retained",
+  "source": "frozen v0911 specimen-local contextual-flow hierarchy",
+  "validated": {
+    "accounting_residual_zero_all": true,
+    "terminal_admissible_zero_all": true,
+    "natural_exhaustion_all": true,
+    "stop_reason_all": "no_contextually_admissible_boundaries",
+    "specimen_local_calibration_all": true,
+    "pooled_across_specimens_all": false,
+    "later_level_rescaling_all": false
+  }
+}

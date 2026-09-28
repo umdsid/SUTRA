@@ -1,0 +1,6 @@
+sample,organ,level0_cells,final_nodes,total_merges,removed_fraction,microsteps,initial_edges,initial_allowed,initial_allowed_fraction,terminal_edges,terminal_allowed,terminal_allowed_fraction,initial_mechanics_available_fraction,terminal_mechanics_available_fraction,natural_exhaustion,stop_reason,accounting_residual
+healthy_reference,Brain,24406,10681,13725,0.5623617143325412,1841,41531,14536,0.3500036117598902,17838,0,0.0,0.6523560713683755,0.5404193295212468,True,no_contextually_admissible_boundaries,0
+alzheimers,Brain,44955,8541,36414,0.81001001001001,3235,71666,25083,0.34999860463818266,11903,0,0.0,0.23356961460106607,0.3698227337645972,True,no_contextually_admissible_boundaries,0
+gbm_reference_addon,Brain,40887,15734,25153,0.6151833100985643,2128,73484,25720,0.3500081650427304,25485,0,0.0,0.3641472973708562,0.37323916029036686,True,no_contextually_admissible_boundaries,0
+nondiseased_kidney,Kidney,97560,41292,56268,0.5767527675276752,1994,194970,68240,0.3500025644971021,82176,0,0.0,0.07587834025747552,0.07648218457943926,True,no_contextually_admissible_boundaries,0
+prcc,Kidney,56510,19902,36608,0.6478145460980358,2318,120239,42084,0.35000291086918556,40721,0,0.0,0.28782674506607675,0.30699147859826625,True,no_contextually_admissible_boundaries,0
