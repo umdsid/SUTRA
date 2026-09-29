@@ -132,27 +132,126 @@
     "MainFig5": {
       "copy": "MainFig5/render_main_fig5_FINE.py",
       "source": "render_main_fig5_FINE.py",
-      "status": "STAGED"
+      "status": "STAGED_COMPLETE",
+      "mode": "standalone_panels",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "assembled_figure": false,
+      "scientific_recalculation": false
     },
     "MainFig6": {
       "copy": "MainFig6/render_main_fig6_FINE.py",
       "source": "render_main_fig6_FINE.py",
-      "status": "STAGED"
+      "status": "STAGED_COMPLETE",
+      "mode": "standalone_panels",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "assembled_figure": false,
+      "scientific_recalculation": false
+    },
+    "SuppFig1": {
+      "copy": "SuppFig1/render_suppfig1_v1_4.py",
+      "source": "render_suppfig1_v1_4.py",
+      "status": "STAGED_COMPLETE",
+      "mode": "standalone_panels",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "assembled_figure": false,
+      "scientific_recalculation": false,
+      "hierarchy_rerun": false
     },
     "SuppFig2": {
-      "copy": "SuppFig2/run_suppfig2_v19_10_D_layout_repair.py",
-      "source": "run_suppfig2_v19_10_D_layout_repair.py",
-      "status": "STAGED"
+      "copy": "SuppFig2/render_suppfig2_v2_3.py",
+      "source": "render_suppfig2_v2_3.py",
+      "status": "STAGED_COMPLETE",
+      "mode": "standalone_panels",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "assembled_figure": false,
+      "scientific_recalculation": false,
+      "hierarchy_rerun": false
     },
     "SuppFig3_4_5": {
       "copy": "SuppFig3_4_5/run_disease_collective_supp.py",
       "source": "run_disease_collective_supp.py",
-      "status": "STAGED"
+      "status": "STAGED_COMPLETE",
+      "mode": "standalone_panels",
+      "assembled_figure": false,
+      "scientific_recalculation": false,
+      "hierarchy_rerun": false,
+      "figures": {
+        "SuppFig3": {
+          "comparison": "healthy-brain_to_alzheimers",
+          "panels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "SuppFig4": {
+          "comparison": "healthy-brain_to_gbm",
+          "panels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "SuppFig5": {
+          "comparison": "nondiseased-kidney_to_prcc",
+          "panels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        }
+      }
     },
     "SuppFig6": {
-      "copy": "SuppFig6/render_suppfig06_v057.py",
-      "source": "render_suppfig06_v057.py",
-      "status": "STAGED"
+      "copy": "SuppFig6/render_supp_hrm_all5.py",
+      "source": "render_supp_hrm_all5.py",
+      "status": "STAGED_COMPLETE",
+      "mode": "standalone_panels",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "assembled_figure": false,
+      "scientific_recalculation": false,
+      "hierarchy_rerun": false
     }
   }
 }

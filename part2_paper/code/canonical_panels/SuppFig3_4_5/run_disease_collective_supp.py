@@ -17,18 +17,38 @@ def read_steps(d):
     with (d / 'steps.jsonl').open() as f:
         return [json.loads(x) for x in f if x.strip()]
 
+_EDGE_CACHE = {}
+
 def read_edges(d, k):
+    key = (str(d), int(k))
+    cached = _EDGE_CACHE.get(key)
+    if cached is not None:
+        return cached
+
     p = d / 'merge_events' / f'step_{k:06d}.parquet'
     if not p.exists():
-        return np.empty((0, 2), np.int64)
-    q = pq.read_table(p, columns=['survivor_node', 'removed_node']).to_pandas().dropna()
-    return q[['survivor_node', 'removed_node']].to_numpy(np.int64)
+        edges = np.empty((0, 2), np.int64)
+    else:
+        tab = pq.read_table(
+            p,
+            columns=['survivor_node', 'removed_node']
+        )
+        edges = np.column_stack([
+            tab['survivor_node'].to_numpy(),
+            tab['removed_node'].to_numpy()
+        ])
+        if edges.dtype != np.int64:
+            edges = edges.astype(np.int64, copy=False)
+
+    _EDGE_CACHE[key] = edges
+    return edges
 
 class DSU:
 
     def __init__(self, n):
         self.p = np.arange(n)
         self.sz = np.ones(n, np.int64)
+        self.max_mass = 1
 
     def find(self, a):
         while self.p[a] != a:
@@ -44,6 +64,8 @@ class DSU:
         self.p[b] = a
         self.sz[a] += self.sz[b]
         self.sz[b] = 0
+        if self.sz[a] > self.max_mass:
+            self.max_mass = int(self.sz[a])
 
     def masses(self):
         return self.sz[(self.p == np.arange(len(self.p))) & (self.sz > 0)]
@@ -52,7 +74,7 @@ class DSU:
         return np.array([self.find(i) for i in range(len(self.p))], np.int64)
 
 def phi(ds, n):
-    return float(ds.masses().max() / n)
+    return float(ds.max_mass / n)
 
 def audit_hierarchy_coordinate(d, steps, expected_n=None, atol=5e-12):
     """Validate the authoritative v0911 hierarchy coordinate without rerunning hierarchy.
@@ -109,8 +131,8 @@ def audit_hierarchy_coordinate(d, steps, expected_n=None, atol=5e-12):
         raise RuntimeError(f'{d.name}: terminal-u mismatch')
     return {'sample': d.name, 'N0': n0, 'u_source': 'hierarchy_coordinate_removed_fraction (pre-step); removed_fraction_after (productive post-step)', 'productive_microsteps': productive, 'terminal_microstep': int(terminal['microstep']), 'terminal_merges': terminal_count, 'terminal_u': terminal_u, 'stop_reason': stop}
 
-def reconstruct(root, sample):
-    d = root / 'hierarchy_v0911_specimen_local_contextual_flow/ledger' / sample
+def reconstruct(hierarchy_root, sample):
+    d = hierarchy_root / 'hierarchy_v0911_specimen_local_contextual_flow/ledger' / sample
     summ = json.loads((d / 'flow_summary.json').read_text())
     expected_n = summ.get('level0_cells', summ.get('N0', None))
     steps = read_steps(d)
@@ -301,8 +323,26 @@ def run(args):
     ref, dis, folder = COMPS[args.comparison]
     out = Path(args.output_root).expanduser().resolve() / 'supplementary' / folder
     out.mkdir(parents=True, exist_ok=True)
-    L = mr / 'hierarchy_level0_v070'
-    led = mr / 'hierarchy_v0911_specimen_local_contextual_flow/ledger'
+    hierarchy_root = mr
+    if not (
+        (hierarchy_root / 'hierarchy_level0_v070').is_dir()
+        and (hierarchy_root / 'hierarchy_v0911_specimen_local_contextual_flow/ledger').is_dir()
+    ):
+        frozen = mr / '_archive_pre_pressure_safe_v12_20260923_164114'
+        if not (
+            (frozen / 'hierarchy_level0_v070').is_dir()
+            and (frozen / 'hierarchy_v0911_specimen_local_contextual_flow/ledger').is_dir()
+        ):
+            raise FileNotFoundError(
+                'Could not resolve the frozen SUTRA hierarchy bundle: '
+                'hierarchy_level0_v070 and '
+                'hierarchy_v0911_specimen_local_contextual_flow/ledger '
+                'must coexist under main-results or the frozen archive.'
+            )
+        hierarchy_root = frozen
+
+    L = hierarchy_root / 'hierarchy_level0_v070'
+    led = hierarchy_root / 'hierarchy_v0911_specimen_local_contextual_flow/ledger'
     A, B, common = overlap(L / ref, L / dis)
     audit = {'comparison': args.comparison, 'reference': ref, 'comparison_sample': dis, 'reference_features': len(A), 'comparison_features': len(B), 'common_features': len(common), 'reference_only': len(np.setdiff1d(A, B)), 'comparison_only': len(np.setdiff1d(B, A)), 'common_fraction_reference': len(common) / len(A), 'common_fraction_comparison': len(common) / len(B)}
     (out / 'panel_overlap_audit.json').write_text(json.dumps(audit, indent=2))
@@ -315,8 +355,18 @@ def run(args):
         print(json.dumps(audit, indent=2))
         return
     R = {}
-    for si, s in enumerate([ref, dis]):
-        tr, sn, pk, steps, n, d, ha = reconstruct(mr, s)
+    samples = [ref, dis]
+    if args.sample_only is not None:
+        if args.sample_only not in samples:
+            raise ValueError(
+                f'--sample-only must be one of {samples} for {args.comparison}; '
+                f'observed {args.sample_only!r}'
+            )
+        samples = [args.sample_only]
+
+    for s in samples:
+        si = [ref, dis].index(s)
+        tr, sn, pk, steps, n, d, ha = reconstruct(hierarchy_root, s)
         print('=== hierarchy-coordinate audit ===')
         print(json.dumps(ha, indent=2))
         (out / f'{s}_hierarchy_coordinate_audit.json').write_text(json.dumps(ha, indent=2))
@@ -328,6 +378,17 @@ def run(args):
         tr.to_csv(out / f'{s}_collective_trajectory.csv', index=False)
         mol.to_csv(out / f'{s}_molecular_recruitment.csv', index=False)
         pd.DataFrame({'level0_index': recr}).to_csv(out / f'{s}_dominant_recruited_ids.csv', index=False)
+        pd.DataFrame({
+            'u': tr.u.to_numpy(),
+            'null_q025': q[0],
+            'null_median': q[1],
+            'null_q975': q[2],
+        }).to_csv(out / f'{s}_aggregation_null.csv', index=False)
+
+    if args.sample_only is not None:
+        print('WROTE SPECIMEN CHECKPOINT', out, args.sample_only)
+        return
+
     for letter, s in [('A', ref), ('B', dis)]:
         fig, ax = plt.subplots(figsize=(3.8, 3.2))
         pmf(ax, R[s][1]['terminal'], DISPLAY[s])
@@ -373,6 +434,7 @@ def main():
     ap.add_argument('--null-reps', type=int, default=250)
     ap.add_argument('--seed', type=int, default=20260922)
     ap.add_argument('--check-only', action='store_true')
+    ap.add_argument('--sample-only', choices=['healthy_reference', 'alzheimers', 'gbm_reference_addon', 'nondiseased_kidney', 'prcc'])
     run(ap.parse_args())
 if __name__ == '__main__':
     main()

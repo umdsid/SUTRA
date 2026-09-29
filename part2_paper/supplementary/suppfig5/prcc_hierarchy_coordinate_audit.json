@@ -1,0 +1,11 @@
+{
+  "sample": "prcc",
+  "N0": 56510,
+  "u_source": "hierarchy_coordinate_removed_fraction (pre-step); removed_fraction_after (productive post-step)",
+  "productive_microsteps": 2317,
+  "terminal_microstep": 2317,
+  "terminal_merges": 36608,
+  "terminal_u": 0.6478145460980358,
+  "stop_reason": "no_contextually_admissible_boundaries",
+  "terminal_phi": 0.07425234471774907
+}

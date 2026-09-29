@@ -1,7 +1,7 @@
 {
   "figure_family": "disease collective organization",
-  "comparison": "hb-ad",
-  "hierarchy_source": "frozen_source:results/hierarchy_v0911_specimen_local_contextual_flow/ledger",
+  "comparison": "nk-prcc",
+  "hierarchy_source": "frozen_source:hierarchy_v0911_specimen_local_contextual_flow/ledger",
   "hierarchy_rerun": false,
   "aggregation_null": {
     "reps": 250,
@@ -10,15 +10,15 @@
   },
   "molecular_basis": "exact feature-name intersection; missing genes never encoded as zero",
   "panel_overlap": {
-    "comparison": "hb-ad",
-    "reference": "healthy_reference",
-    "comparison_sample": "alzheimers",
+    "comparison": "nk-prcc",
+    "reference": "nondiseased_kidney",
+    "comparison_sample": "prcc",
     "reference_features": 541,
     "comparison_features": 541,
-    "common_features": 451,
-    "reference_only": 90,
-    "comparison_only": 90,
-    "common_fraction_reference": 0.833641404805915,
-    "common_fraction_comparison": 0.833641404805915
+    "common_features": 541,
+    "reference_only": 0,
+    "comparison_only": 0,
+    "common_fraction_reference": 1.0,
+    "common_fraction_comparison": 1.0
   }
 }

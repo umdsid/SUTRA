@@ -1,0 +1,11 @@
+{
+  "sample": "nondiseased_kidney",
+  "N0": 97560,
+  "u_source": "hierarchy_coordinate_removed_fraction (pre-step); removed_fraction_after (productive post-step)",
+  "productive_microsteps": 1993,
+  "terminal_microstep": 1993,
+  "terminal_merges": 56268,
+  "terminal_u": 0.5767527675276752,
+  "stop_reason": "no_contextually_admissible_boundaries",
+  "terminal_phi": 0.1327388273882739
+}

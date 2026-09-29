@@ -1,0 +1,29 @@
+{
+  "figure": "Supplementary Figure 2",
+  "mode": "standalone_panels",
+  "panels": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "assembled_figure": false,
+  "hierarchy_rerun": false,
+  "derived_display_statistics": true,
+  "scientific_recalculation": false,
+  "display_revision": "V2.3 final",
+  "purpose": "Matched-budget comparison of representation-derived interface selection with integrated SUTRA relational selection, followed by explicit Level-0 ancestry traceability through frozen hierarchy checkpoints.",
+  "sources": {
+    "A_C": "frozen matched-candidate Supplementary Figure 2 products from v1.5.2 source tables",
+    "D": "frozen matched_candidate_edge_table.parquet tables; descriptive matched-budget summaries only",
+    "E": "frozen v0911 hierarchy label checkpoints and Level-0 aligned physical coordinates"
+  },
+  "validated": {
+    "matched_selection_budget": true,
+    "roi_level0_cells_each_specimen": 900,
+    "level0_ancestry_coverage": 1.0,
+    "tracked_terminal_ancestries_each_specimen": 6,
+    "tracked_ancestries_end_as_one_terminal_object": true
+  }
+}

@@ -1,0 +1,11 @@
+sample,sample_label,method,n_candidate_interfaces,n_selected,jaccard_with_integrated_SUTRA,fraction_selected_SUTRA_admissible
+healthy_reference,Healthy brain,SUTRA molecular only,41531,14536,0.27430525116156745,0.4305173362685746
+healthy_reference,Healthy brain,PCA,41531,14536,0.21777740543710467,0.3576637314254265
+healthy_reference,Healthy brain,kPCA*,41531,14536,0.18361696930217408,0.3102641717116125
+healthy_reference,Healthy brain,UMAP,41531,14536,0.2130012099970793,0.3511970280682444
+healthy_reference,Healthy brain,t-SNE,41531,14536,0.21467368596975014,0.3534672537149147
+nondiseased_kidney,Nondiseased kidney,SUTRA molecular only,194970,68240,0.2913236824675939,0.45120164126611956
+nondiseased_kidney,Nondiseased kidney,PCA,194970,68240,0.2591683657935768,0.4116500586166471
+nondiseased_kidney,Nondiseased kidney,kPCA*,194970,68240,0.28842232459784006,0.4477139507620164
+nondiseased_kidney,Nondiseased kidney,UMAP,194970,68240,0.28977385486264023,0.44934056271981243
+nondiseased_kidney,Nondiseased kidney,t-SNE,194970,68240,0.28504980886202286,0.4436400937866354

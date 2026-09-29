@@ -1,0 +1,9 @@
+sample,sample_label,checkpoint,target_u,actual_u,roi_level0_cells,roi_current_objects,level0_ancestry_coverage
+healthy_reference,Healthy brain,labels_000000.npz,0.0,0.0,900,900,1.0
+healthy_reference,Healthy brain,labels_000701.npz,0.25,0.25682209292796854,900,646,1.0
+healthy_reference,Healthy brain,labels_001601.npz,0.5,0.5034008030812095,900,397,1.0
+healthy_reference,Healthy brain,labels_001841.npz,1.0,0.5623617143325412,900,330,1.0
+nondiseased_kidney,Nondiseased kidney,labels_000000.npz,0.0,0.0,900,900,1.0
+nondiseased_kidney,Nondiseased kidney,labels_000701.npz,0.25,0.2476219762197622,900,759,1.0
+nondiseased_kidney,Nondiseased kidney,labels_001651.npz,0.5,0.49723247232472323,900,518,1.0
+nondiseased_kidney,Nondiseased kidney,labels_001994.npz,1.0,0.5767527675276752,900,399,1.0
