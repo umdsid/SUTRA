@@ -1,0 +1,56 @@
+{
+  "release_policy": {
+    "frozen_movies": true,
+    "scientific_recalculation": false,
+    "healthy_reference_final_refinement": "v053",
+    "matched_five_specimen_generation": "v048",
+    "note": "v048 is the last archived matched five-specimen scientific-movie generation. Healthy reference received subsequent presentation refinements through v053; the other four specimens retain v048."
+  },
+  "movies": [
+    {
+      "movie": 1,
+      "specimen": "healthy_reference",
+      "file": "movie1/healthy_reference_scientific_hierarchy_v053.mp4",
+      "version": "v053",
+      "bytes": 7492180,
+      "sha256": "6622b96b3673ce863e184d3166c5d08421a811e241ba25a8cc210a083b5f3340",
+      "note": "Final healthy-reference presentation refinement."
+    },
+    {
+      "movie": 2,
+      "specimen": "alzheimers",
+      "file": "movie2/alzheimers_scientific_hierarchy_v048.mp4",
+      "version": "v048",
+      "bytes": 5241808,
+      "sha256": "92d64ef6e734bc999f01aba56cbc3138f5ff73700772c8871601ff5da5e4d99b",
+      "note": "Latest archived specimen-specific scientific movie."
+    },
+    {
+      "movie": 3,
+      "specimen": "gbm",
+      "file": "movie3/gbm_reference_addon_scientific_hierarchy_v048.mp4",
+      "version": "v048",
+      "bytes": 6781926,
+      "sha256": "dca899460a20e9aca179c2ea210121407f09d06f15eab642eab91455fa6d9c14",
+      "note": "Latest archived specimen-specific scientific movie."
+    },
+    {
+      "movie": 4,
+      "specimen": "nondiseased_kidney",
+      "file": "movie4/nondiseased_kidney_scientific_hierarchy_v048.mp4",
+      "version": "v048",
+      "bytes": 5049480,
+      "sha256": "96de7cc97ebf908131658ca5cb5aea02ad8a8260e3e24e3559af0487bcbccc83",
+      "note": "Latest archived specimen-specific scientific movie."
+    },
+    {
+      "movie": 5,
+      "specimen": "prcc",
+      "file": "movie5/prcc_scientific_hierarchy_v048.mp4",
+      "version": "v048",
+      "bytes": 5059898,
+      "sha256": "77b076969bccf953df170501d887d5c39efdd3d8a0f81d53772db6017f63f987",
+      "note": "Latest archived specimen-specific scientific movie."
+    }
+  ]
+}
