@@ -1,0 +1,13 @@
+{
+  "last_batch": 2127,
+  "last_domains": 15734,
+  "last_cumulative_mergers": 25153,
+  "terminal_excess_r2": {
+    "EGFR": 0.0635187915344662,
+    "PDGFRA": 0.077130352675741
+  },
+  "last_state_encoded_frames": 180,
+  "terminal_hold_seconds": 3.0,
+  "total_frames": 7200,
+  "last_frame_is_terminal": true
+}

@@ -1,0 +1,13 @@
+{
+  "last_batch": 1993,
+  "last_domains": 41292,
+  "last_cumulative_mergers": 56268,
+  "terminal_excess_r2": {
+    "UMOD": -0.0692190663112053,
+    "PECAM1": 0.1325572414352266
+  },
+  "last_state_encoded_frames": 180,
+  "terminal_hold_seconds": 3.0,
+  "total_frames": 7200,
+  "last_frame_is_terminal": true
+}

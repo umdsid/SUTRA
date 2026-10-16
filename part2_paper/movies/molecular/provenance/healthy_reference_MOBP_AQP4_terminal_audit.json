@@ -1,0 +1,13 @@
+{
+  "last_batch": 1840,
+  "last_domains": 10681,
+  "last_cumulative_mergers": 13725,
+  "terminal_excess_r2": {
+    "MOBP": 0.0171764599866504,
+    "AQP4": 0.0302188533950418
+  },
+  "last_state_encoded_frames": 180,
+  "terminal_hold_seconds": 3.0,
+  "total_frames": 7200,
+  "last_frame_is_terminal": true
+}

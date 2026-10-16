@@ -1,0 +1,13 @@
+{
+  "last_batch": 2317,
+  "last_domains": 19902,
+  "last_cumulative_mergers": 36608,
+  "terminal_excess_r2": {
+    "EPCAM": -0.0233896023486083,
+    "KRT7": 0.0523457643609015
+  },
+  "last_state_encoded_frames": 180,
+  "terminal_hold_seconds": 3.0,
+  "total_frames": 7200,
+  "last_frame_is_terminal": true
+}

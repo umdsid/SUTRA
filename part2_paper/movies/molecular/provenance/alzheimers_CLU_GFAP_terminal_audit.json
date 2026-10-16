@@ -1,0 +1,13 @@
+{
+  "last_batch": 3234,
+  "last_domains": 8541,
+  "last_cumulative_mergers": 36414,
+  "terminal_excess_r2": {
+    "CLU": 0.0711224436287182,
+    "GFAP": 0.0430032376612455
+  },
+  "last_state_encoded_frames": 180,
+  "terminal_hold_seconds": 3.0,
+  "total_frames": 7200,
+  "last_frame_is_terminal": true
+}

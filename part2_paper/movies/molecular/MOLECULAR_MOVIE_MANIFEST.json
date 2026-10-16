@@ -1,0 +1,74 @@
+{
+  "title": "SUTRA Supplementary Movies 6\u201315: Molecular Hierarchy Reconstructions",
+  "release_tag": "supplementary-videos-v1",
+  "release_url": "https://github.com/umdsid/SUTRA/releases/tag/supplementary-videos-v1",
+  "release_draft_at_metadata_creation": false,
+  "policy": {
+    "frozen_movies": true,
+    "movie_generation_reproducibility": "Refer to individual provenance records; presence of a video does not imply its producer is included.",
+    "scientific_recalculation": false
+  },
+  "assets": [
+    {
+      "filename": "Supplementary_Video_06_Healthy_Brain_SLC17A7_GAD1.mp4",
+      "bytes": 54159866,
+      "download_url": "https://github.com/umdsid/SUTRA/releases/download/supplementary-videos-v1/Supplementary_Video_06_Healthy_Brain_SLC17A7_GAD1.mp4",
+      "github_asset_id": 645557743
+    },
+    {
+      "filename": "Supplementary_Video_07_Healthy_Brain_MOBP_AQP4.mp4",
+      "bytes": 56659432,
+      "download_url": "https://github.com/umdsid/SUTRA/releases/download/supplementary-videos-v1/Supplementary_Video_07_Healthy_Brain_MOBP_AQP4.mp4",
+      "github_asset_id": 645557746
+    },
+    {
+      "filename": "Supplementary_Video_08_Alzheimers_CLU_GFAP.mp4",
+      "bytes": 113705409,
+      "download_url": "https://github.com/umdsid/SUTRA/releases/download/supplementary-videos-v1/Supplementary_Video_08_Alzheimers_CLU_GFAP.mp4",
+      "github_asset_id": 645557735
+    },
+    {
+      "filename": "Supplementary_Video_09_Alzheimers_MOBP_SLC17A7.mp4",
+      "bytes": 103556259,
+      "download_url": "https://github.com/umdsid/SUTRA/releases/download/supplementary-videos-v1/Supplementary_Video_09_Alzheimers_MOBP_SLC17A7.mp4",
+      "github_asset_id": 645557739
+    },
+    {
+      "filename": "Supplementary_Video_10_GBM_EGFR_PDGFRA.mp4",
+      "bytes": 84568190,
+      "download_url": "https://github.com/umdsid/SUTRA/releases/download/supplementary-videos-v1/Supplementary_Video_10_GBM_EGFR_PDGFRA.mp4",
+      "github_asset_id": 645557744
+    },
+    {
+      "filename": "Supplementary_Video_11_GBM_SOX2_MKI67.mp4",
+      "bytes": 86832912,
+      "download_url": "https://github.com/umdsid/SUTRA/releases/download/supplementary-videos-v1/Supplementary_Video_11_GBM_SOX2_MKI67.mp4",
+      "github_asset_id": 645577874
+    },
+    {
+      "filename": "Supplementary_Video_12_Kidney_UMOD_PECAM1.mp4",
+      "bytes": 94859548,
+      "download_url": "https://github.com/umdsid/SUTRA/releases/download/supplementary-videos-v1/Supplementary_Video_12_Kidney_UMOD_PECAM1.mp4",
+      "github_asset_id": 645579112
+    },
+    {
+      "filename": "Supplementary_Video_13_Kidney_AQP2_SLC22A8.mp4",
+      "bytes": 93988035,
+      "download_url": "https://github.com/umdsid/SUTRA/releases/download/supplementary-videos-v1/Supplementary_Video_13_Kidney_AQP2_SLC22A8.mp4",
+      "github_asset_id": 645592519
+    },
+    {
+      "filename": "Supplementary_Video_14_PRCC_EPCAM_KRT7.mp4",
+      "bytes": 63368913,
+      "download_url": "https://github.com/umdsid/SUTRA/releases/download/supplementary-videos-v1/Supplementary_Video_14_PRCC_EPCAM_KRT7.mp4",
+      "github_asset_id": 645598317
+    },
+    {
+      "filename": "Supplementary_Video_15_PRCC_MET_MKI67.mp4",
+      "bytes": 66285496,
+      "download_url": "https://github.com/umdsid/SUTRA/releases/download/supplementary-videos-v1/Supplementary_Video_15_PRCC_MET_MKI67.mp4",
+      "github_asset_id": 645600162
+    }
+  ],
+  "numbering_source": "numbering_map.json"
+}

@@ -1,0 +1,11 @@
+specimen,genes,status,error
+alzheimers,"CLU,GFAP",SKIPPED_VALIDATED,
+alzheimers,"MOBP,SLC17A7",SKIPPED_VALIDATED,
+healthy_reference,"SLC17A7,GAD1",SKIPPED_VALIDATED,
+healthy_reference,"MOBP,AQP4",DONE,
+gbm_reference_addon,"SOX2,MKI67",SKIPPED_VALIDATED,
+gbm_reference_addon,"EGFR,PDGFRA",DONE,
+nondiseased_kidney,"UMOD,PECAM1",SKIPPED_VALIDATED,
+nondiseased_kidney,"AQP2,SLC22A8",DONE,
+prcc,"EPCAM,KRT7",DONE,
+prcc,"MET,MKI67",DONE,

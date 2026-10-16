@@ -1,0 +1,62 @@
+[
+  {
+    "specimen": "alzheimers",
+    "genes": "CLU,GFAP",
+    "status": "SKIPPED_VALIDATED",
+    "error": ""
+  },
+  {
+    "specimen": "alzheimers",
+    "genes": "MOBP,SLC17A7",
+    "status": "SKIPPED_VALIDATED",
+    "error": ""
+  },
+  {
+    "specimen": "healthy_reference",
+    "genes": "SLC17A7,GAD1",
+    "status": "SKIPPED_VALIDATED",
+    "error": ""
+  },
+  {
+    "specimen": "healthy_reference",
+    "genes": "MOBP,AQP4",
+    "status": "DONE",
+    "error": ""
+  },
+  {
+    "specimen": "gbm_reference_addon",
+    "genes": "SOX2,MKI67",
+    "status": "SKIPPED_VALIDATED",
+    "error": ""
+  },
+  {
+    "specimen": "gbm_reference_addon",
+    "genes": "EGFR,PDGFRA",
+    "status": "DONE",
+    "error": ""
+  },
+  {
+    "specimen": "nondiseased_kidney",
+    "genes": "UMOD,PECAM1",
+    "status": "SKIPPED_VALIDATED",
+    "error": ""
+  },
+  {
+    "specimen": "nondiseased_kidney",
+    "genes": "AQP2,SLC22A8",
+    "status": "DONE",
+    "error": ""
+  },
+  {
+    "specimen": "prcc",
+    "genes": "EPCAM,KRT7",
+    "status": "DONE",
+    "error": ""
+  },
+  {
+    "specimen": "prcc",
+    "genes": "MET,MKI67",
+    "status": "DONE",
+    "error": ""
+  }
+]

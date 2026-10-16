@@ -1,0 +1,16 @@
+{
+  "status": "REPLAY_VALIDATED",
+  "cells": 56510,
+  "event_batches": 2317,
+  "mergers": 36608,
+  "terminal_domains": 19902,
+  "render_states": 450,
+  "contrast_definition": "sqrt(n1*n2)/(n1+n2) * abs(mean1-mean2) / global_gene_sd, log1p measured counts",
+  "contrast_threshold_quantile": 0.85,
+  "thresholds": [
+    0.22102342151758567,
+    0.2530291518979873
+  ],
+  "event_chain_sha256": "fe8a61b9febb57e7681ddc22c3e5cd060b40290a6656f43645770343515d516a",
+  "snapshots_sha256": "415703de2493bbf5533b73c4e2087c93a251badb7902d6a9fb6d30ea23a9fb93"
+}

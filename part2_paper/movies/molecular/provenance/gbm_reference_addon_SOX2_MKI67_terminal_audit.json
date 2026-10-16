@@ -1,0 +1,13 @@
+{
+  "last_batch": 2127,
+  "last_domains": 15734,
+  "last_cumulative_mergers": 25153,
+  "terminal_excess_r2": {
+    "SOX2": 0.0541955543063285,
+    "MKI67": 0.018579265614897
+  },
+  "last_state_encoded_frames": 180,
+  "terminal_hold_seconds": 3.0,
+  "total_frames": 7200,
+  "last_frame_is_terminal": true
+}

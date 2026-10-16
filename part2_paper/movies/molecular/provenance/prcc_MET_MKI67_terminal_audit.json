@@ -1,0 +1,13 @@
+{
+  "last_batch": 2317,
+  "last_domains": 19902,
+  "last_cumulative_mergers": 36608,
+  "terminal_excess_r2": {
+    "MET": 0.0245170448155204,
+    "MKI67": -0.0316804103896148
+  },
+  "last_state_encoded_frames": 180,
+  "terminal_hold_seconds": 3.0,
+  "total_frames": 7200,
+  "last_frame_is_terminal": true
+}
