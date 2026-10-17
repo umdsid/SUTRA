@@ -1,0 +1,70 @@
+{
+  "analysis": "Fig5 structural recruitment v1",
+  "hierarchy_source": "/Users/sid/Desktop/SUTRA/results/hierarchy_v0911_specimen_local_contextual_flow/ledger",
+  "level0_source": "/Users/sid/Desktop/SUTRA/results/hierarchy_level0_v070",
+  "selection_uses_expression": false,
+  "samples": {
+    "healthy_reference": {
+      "level0_cells": 24406,
+      "total_merges": 13725,
+      "final_nodes": 10681,
+      "removed_fraction": 0.5623617143325412,
+      "stop_reason": "no_contextually_admissible_boundaries",
+      "natural_exhaustion": true,
+      "specimen_local_calibration": true,
+      "event_ledger": "/Users/sid/Desktop/SUTRA/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/healthy_reference_accepted_events.parquet"
+    },
+    "alzheimers": {
+      "level0_cells": 44955,
+      "total_merges": 36414,
+      "final_nodes": 8541,
+      "removed_fraction": 0.81001001001001,
+      "stop_reason": "no_contextually_admissible_boundaries",
+      "natural_exhaustion": true,
+      "specimen_local_calibration": true,
+      "event_ledger": "/Users/sid/Desktop/SUTRA/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/alzheimers_accepted_events.parquet"
+    },
+    "gbm_reference_addon": {
+      "level0_cells": 40887,
+      "total_merges": 25153,
+      "final_nodes": 15734,
+      "removed_fraction": 0.6151833100985643,
+      "stop_reason": "no_contextually_admissible_boundaries",
+      "natural_exhaustion": true,
+      "specimen_local_calibration": true,
+      "event_ledger": "/Users/sid/Desktop/SUTRA/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/gbm_reference_addon_accepted_events.parquet"
+    },
+    "nondiseased_kidney": {
+      "level0_cells": 97560,
+      "total_merges": 56268,
+      "final_nodes": 41292,
+      "removed_fraction": 0.5767527675276752,
+      "stop_reason": "no_contextually_admissible_boundaries",
+      "natural_exhaustion": true,
+      "specimen_local_calibration": true,
+      "event_ledger": "/Users/sid/Desktop/SUTRA/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/nondiseased_kidney_accepted_events.parquet"
+    },
+    "prcc": {
+      "level0_cells": 56510,
+      "total_merges": 36608,
+      "final_nodes": 19902,
+      "removed_fraction": 0.6478145460980358,
+      "stop_reason": "no_contextually_admissible_boundaries",
+      "natural_exhaustion": true,
+      "specimen_local_calibration": true,
+      "event_ledger": "/Users/sid/Desktop/SUTRA/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/prcc_accepted_events.parquet"
+    }
+  },
+  "primary_comparisons": {
+    "brain": [
+      "healthy_reference",
+      "alzheimers"
+    ],
+    "kidney": [
+      "nondiseased_kidney",
+      "prcc"
+    ]
+  },
+  "gbm_in_primary_figure": false,
+  "reason_gbm_excluded": "Biological provenance must be verified before interpreting gbm_reference_addon as a disease specimen."
+}

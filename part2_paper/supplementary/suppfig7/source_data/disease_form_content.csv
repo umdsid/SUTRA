@@ -1,0 +1,3 @@
+organ,reference,disease,structural_form_distance,biological_content_distance,form_common_u_max,content_common_u_max,content_to_form_ratio_descriptive
+brain,healthy_reference,alzheimers,1.3620409096168808,0.8540982818696397,0.56,0.56,0.6270724145208554
+kidney,nondiseased_kidney,prcc,1.2639825612924342,0.7675355594617489,0.5700000000000001,0.5700000000000001,0.6072358772710729

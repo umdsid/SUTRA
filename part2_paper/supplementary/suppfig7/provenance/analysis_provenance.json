@@ -1,0 +1,76 @@
+{
+  "analysis": "SUTRA organizational-family analysis v1.0",
+  "native_u_preserved": true,
+  "endpoint_rescaling": false,
+  "grid_step": 0.01,
+  "window_width": 0.05,
+  "structural_variables": [
+    "remaining_object_fraction",
+    "incoming_mass_fraction_N0",
+    "post_mass_fraction_N0",
+    "incoming_fraction",
+    "boundary_log",
+    "balanced_recruitment"
+  ],
+  "content_variables": [
+    "molecular_effective",
+    "mechanics_effective",
+    "communication_support_effective",
+    "geometry_effective",
+    "topology_effective"
+  ],
+  "structural_scaling": {
+    "remaining_object_fraction": {
+      "median": 0.6800418096383413,
+      "scale": 0.3201801897907677
+    },
+    "incoming_mass_fraction_N0": {
+      "median": 2.2244466688911134e-05,
+      "scale": 6.761668564439336e-06
+    },
+    "post_mass_fraction_N0": {
+      "median": 0.00019566121261036515,
+      "scale": 0.0001891823867735336
+    },
+    "incoming_fraction": {
+      "median": 0.1530952380952381,
+      "scale": 0.17307692307692307
+    },
+    "boundary_log": {
+      "median": 0.6931471805599453,
+      "scale": 0.12147197780064439
+    },
+    "balanced_recruitment": {
+      "median": 0.3061904761904762,
+      "scale": 0.34615384615384615
+    }
+  },
+  "content_scaling": {
+    "molecular_effective": {
+      "median": 6.972388181062164,
+      "scale": 4.423845322268749
+    },
+    "mechanics_effective": {
+      "median": 0.7085351099139694,
+      "scale": 0.6906741183774412
+    },
+    "communication_support_effective": {
+      "median": 0.047651956310137356,
+      "scale": 0.13092693299075894
+    },
+    "geometry_effective": {
+      "median": 7.220788592142588,
+      "scale": 4.64777008563617
+    },
+    "topology_effective": {
+      "median": 0.9188737080834211,
+      "scale": 0.05869083605519321
+    }
+  },
+  "mechanics": "support-weighted median; no zero fill",
+  "gbm_in_disease_inference": false,
+  "gbm_reason": "Biological provenance must be verified before interpreting gbm_reference_addon as a disease specimen.",
+  "family_null": "within-specimen circular shift along native-u",
+  "interpretation": "descriptive alignment test; not universality or population inference",
+  "selection_uses_expression_note": "Fig5 downstream event selection only; not SUTRA hierarchy construction"
+}

@@ -1,0 +1,32 @@
+{
+  "alzheimers": {
+    "n_states": 25,
+    "multistart_runs": 325,
+    "K256_to_K512_relative_change_median": 0.044717497120067146,
+    "K256_to_K512_relative_change_max": 0.16805220488399863,
+    "max_row_marginal_error": 2.5673907444456745e-16,
+    "max_column_marginal_error": 3.3653635433950063e-16,
+    "max_coupling_mass_error": 4.440892098500626e-16,
+    "max_multistart_objective_audit_error": 1.519617764955683e-15,
+    "max_geodesic_objective_audit_error": 9.298117831235686e-16,
+    "principal_domain_mass": {
+      "alzheimers": 0.9580469358247136,
+      "healthy_reference": 0.8880603130377775
+    }
+  },
+  "gbm_reference_addon": {
+    "n_states": 25,
+    "multistart_runs": 325,
+    "K256_to_K512_relative_change_median": 0.03163302783573059,
+    "K256_to_K512_relative_change_max": 0.08969622148584236,
+    "max_row_marginal_error": 1.2281842209915794e-15,
+    "max_column_marginal_error": 1.3322676295501878e-15,
+    "max_coupling_mass_error": 1.4432899320127035e-15,
+    "max_multistart_objective_audit_error": 1.5543122344752194e-15,
+    "max_geodesic_objective_audit_error": 6.938893903907228e-16,
+    "principal_domain_mass": {
+      "gbm_reference_addon": 0.930515811871744,
+      "healthy_reference": 0.8880603130377775
+    }
+  }
+}

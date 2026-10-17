@@ -1,0 +1,6 @@
+sample,display_name,organ,N0,total_merges,endpoint_u,final_nodes,stop_reason,natural_exhaustion
+healthy_reference,Healthy brain,brain,24406,13725,0.5623617143325412,10681,no_contextually_admissible_boundaries,True
+alzheimers,Alzheimer's,brain,44955,36414,0.81001001001001,8541,no_contextually_admissible_boundaries,True
+gbm_reference_addon,GBM-related,brain,40887,25153,0.6151833100985643,15734,no_contextually_admissible_boundaries,True
+nondiseased_kidney,Nondiseased kidney,kidney,97560,56268,0.5767527675276752,41292,no_contextually_admissible_boundaries,True
+prcc,PRCC,kidney,56510,36608,0.6478145460980358,19902,no_contextually_admissible_boundaries,True
