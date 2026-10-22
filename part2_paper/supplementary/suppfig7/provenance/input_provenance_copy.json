@@ -1,7 +1,7 @@
 {
   "analysis": "Fig5 structural recruitment v1",
-  "hierarchy_source": "/Users/sid/Desktop/SUTRA/results/hierarchy_v0911_specimen_local_contextual_flow/ledger",
-  "level0_source": "/Users/sid/Desktop/SUTRA/results/hierarchy_level0_v070",
+  "hierarchy_source": "SUTRA_LOCAL_SOURCE/results/hierarchy_v0911_specimen_local_contextual_flow/ledger",
+  "level0_source": "SUTRA_LOCAL_SOURCE/results/hierarchy_level0_v070",
   "selection_uses_expression": false,
   "samples": {
     "healthy_reference": {
@@ -12,7 +12,7 @@
       "stop_reason": "no_contextually_admissible_boundaries",
       "natural_exhaustion": true,
       "specimen_local_calibration": true,
-      "event_ledger": "/Users/sid/Desktop/SUTRA/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/healthy_reference_accepted_events.parquet"
+      "event_ledger": "SUTRA_LOCAL_SOURCE/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/healthy_reference_accepted_events.parquet"
     },
     "alzheimers": {
       "level0_cells": 44955,
@@ -22,7 +22,7 @@
       "stop_reason": "no_contextually_admissible_boundaries",
       "natural_exhaustion": true,
       "specimen_local_calibration": true,
-      "event_ledger": "/Users/sid/Desktop/SUTRA/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/alzheimers_accepted_events.parquet"
+      "event_ledger": "SUTRA_LOCAL_SOURCE/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/alzheimers_accepted_events.parquet"
     },
     "gbm_reference_addon": {
       "level0_cells": 40887,
@@ -32,7 +32,7 @@
       "stop_reason": "no_contextually_admissible_boundaries",
       "natural_exhaustion": true,
       "specimen_local_calibration": true,
-      "event_ledger": "/Users/sid/Desktop/SUTRA/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/gbm_reference_addon_accepted_events.parquet"
+      "event_ledger": "SUTRA_LOCAL_SOURCE/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/gbm_reference_addon_accepted_events.parquet"
     },
     "nondiseased_kidney": {
       "level0_cells": 97560,
@@ -42,7 +42,7 @@
       "stop_reason": "no_contextually_admissible_boundaries",
       "natural_exhaustion": true,
       "specimen_local_calibration": true,
-      "event_ledger": "/Users/sid/Desktop/SUTRA/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/nondiseased_kidney_accepted_events.parquet"
+      "event_ledger": "SUTRA_LOCAL_SOURCE/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/nondiseased_kidney_accepted_events.parquet"
     },
     "prcc": {
       "level0_cells": 56510,
@@ -52,7 +52,7 @@
       "stop_reason": "no_contextually_admissible_boundaries",
       "natural_exhaustion": true,
       "specimen_local_calibration": true,
-      "event_ledger": "/Users/sid/Desktop/SUTRA/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/prcc_accepted_events.parquet"
+      "event_ledger": "SUTRA_LOCAL_SOURCE/results/Fig5_Disease_Trajectories/structural_recruitment_v1/event_ledger/prcc_accepted_events.parquet"
     }
   },
   "primary_comparisons": {
