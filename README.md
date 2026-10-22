@@ -5,7 +5,7 @@
 **Reconstructing how molecular and spatial organization are threaded through tissue architecture across scales.**
 
 <p align="center">
-  <img src="docs/assets/sutra_hierarchy.gif" alt="SUTRA tissue-organization hierarchy" width="900">
+  <img src="docs/assets/sutra_movie1_preview.gif" alt="SUTRA tissue-organization hierarchy" width="900">
 </p>
 
 SUTRA (सूत्र, *sūtra*: a thread) is a computational framework for studying tissue architecture from spatial transcriptomic observations. It connects molecular measurements, local cellular neighborhoods, tissue geometry, and higher-order organizational relationships within a recursive, specimen-aware hierarchy. Rather than treating a tissue as a single embedding or a collection of disconnected scales, SUTRA follows how observable relationships persist, change, and reorganize as the representation of tissue structure evolves.
