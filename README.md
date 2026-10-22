@@ -75,7 +75,7 @@ The organizational coordinate indexes a reconstructed hierarchy, not elapsed exp
 
 ## Software and attribution
 
-The public Python namespace is `sutra`. Historical `strata` and `strata_hierarchy` namespaces are not public interfaces of this release.
+The public Python namespace is `sutra`.
 
 **Authors:** Siddharth Sharma and Sanjay Jain.
 
